@@ -6,7 +6,7 @@ const cardsData = [
     id: 3,
     imageSrc: "/cities/cambridge.jpg",
     title: "Mississauga",
-    link: "/ontario/cambridge",
+    link: "/ontario/mississauga",
   },
   {
     id: 1,
@@ -24,37 +24,37 @@ const cardsData = [
     id: 4,
     imageSrc: "/cities/edmonton.jpeg",
     title: "Burlington",
-    link: "/ontario/edmonton",
+    link: "/ontario/burlington",
   },
   {
     id: 5,
     imageSrc: "/cities/winnipeg.jpeg",
     title: "Whitby",
-    link: "/ontario/winnipeg",
+    link: "/ontario/whitby",
   },
   {
     id: 6,
     imageSrc: "/cities/halifax.jpeg",
     title: "Ajax",
-    link: "/ontario/halifax",
+    link: "/ontario/ajax",
   },
   {
     id: 7,
     imageSrc: "/cities/calgary.jpeg",
     title: "Scarborough",
-    link: "/ontario/",
+    link: "/ontario/scarborough",
   },
   {
     id: 8,
     imageSrc: "/cities/grimsby.jpg",
     title: "Oakville",
-    link: "/ontario/",
+    link: "/ontario/oakville",
   },
   {
     id: 8,
     imageSrc: "/cities/pickering.png",
     title: "Pickering",
-    link: "/ontario/",
+    link: "/ontario/pickering",
   },
 
   // Add more cards as needed

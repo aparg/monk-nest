@@ -16,6 +16,7 @@ const AdditionalListing = ({
   newSalesData,
   houseType = null,
   saleLeaseValue = null,
+  title,
 }) => {
   const scrollRef = useRef(null); //used to hold scroll value
   const cardRef = useRef(null); //used to hold card width value
@@ -56,24 +57,29 @@ const AdditionalListing = ({
     <div className="position-relative">
       <div className="d-flex justify-content-between pt-5 explore-container my-0 sm:my-4 align-center">
         <div className="w-full flex flex-row justify-between items-center">
-          {!houseType ? (
-            <h3 className="main-title fs-3 fs-sm-2">
-              Explore New {houseType ? `${houseType}` : ``} Listings in {city}
-            </h3>
+          {!title ? (
+            !houseType ? (
+              <h3 className="main-title fs-3 fs-sm-2">
+                Explore New {houseType ? `${houseType}` : ``} Listings in {city}
+              </h3>
+            ) : (
+              <h3 className="main-title fs-3 fs-sm-2 ">
+                Continue searching{" "}
+                {capitalizeFirstLetter(modifyType(houseType))}
+                {`${
+                  plural[capitalizeFirstLetter(modifyType(houseType))] || ""
+                }`}{" "}
+                {saleLeaseValue &&
+                  `${
+                    Object.values(saleLease).find((data) => {
+                      return data.value == saleLeaseValue;
+                    })?.name
+                  } `}
+                in {(city && decodeURIComponent(city)) || "Ontario"}
+              </h3>
+            )
           ) : (
-            <h3 className="main-title fs-3 fs-sm-2 ">
-              Continue searching {capitalizeFirstLetter(modifyType(houseType))}
-              {`${
-                plural[capitalizeFirstLetter(modifyType(houseType))] || ""
-              }`}{" "}
-              {saleLeaseValue &&
-                `${
-                  Object.values(saleLease).find((data) => {
-                    return data.value == saleLeaseValue;
-                  })?.name
-                } `}
-              in {(city && decodeURIComponent(city)) || "Ontario"}
-            </h3>
+            <h3 className="main-title fs-3 fs-sm-2 ">{title}</h3>
           )}
           <a
             // href={`/ontario${formattedCity ? `/${formattedCity}` : ""}${

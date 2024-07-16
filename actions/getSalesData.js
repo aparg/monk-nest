@@ -19,8 +19,6 @@ export const getSalesData = async (offset, limit, city, listingType) => {
     if (listingType) {
       selectQuery += `,TypeOwnSrch=${listingType}`;
     }
-    console.log("get sales data..");
-    console.log(url);
     const res = await fetch(url, options);
     const data = await res.json();
     return data.results;
@@ -45,7 +43,10 @@ export const getFilteredRetsData = async (queryParams) => {
     }`;
     const skipQuery = `${queryParams.offset}`;
     const limitQuery = `${queryParams.limit}`;
-    let rangeQuery = `minListPrice=${queryParams.minListPrice},minWashrooms=${queryParams.washroom}`;
+    let rangeQuery =
+      queryParams.minListPrice || queryParams.washroom
+        ? `minListPrice=${queryParams.minListPrice},minWashrooms=${queryParams.washroom}`
+        : "";
     let selectOrQuery = "";
 
     if (queryParams.houseType) {
@@ -85,7 +86,6 @@ export const getFilteredRetsData = async (queryParams) => {
       method: "GET",
       cache: "no-store",
     };
-    console.log(url);
     const res = await fetch(url, options);
     const data = await res.json();
     return data.results;

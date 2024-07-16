@@ -13,6 +13,8 @@ import RealEstateNews from "@/components/RealEstateNews";
 import SuggestedCity from "@/components/SuggestedCity";
 import { Image } from "react-bootstrap";
 import Link from "next/link";
+import PropertySlider from "@/components/PropertySlider";
+import PreconPropertySlider from "@/components/PreconPropertySlider";
 
 const INITIAL_OFFSET = 0;
 const INITIAL_LIMIT = 20;
@@ -21,6 +23,22 @@ const CAMBRIDGECITY = "Cambridge";
 const BRAMPTONCITY = "Brampton";
 
 export default async function Home() {
+  //get data for precon
+  async function getData() {
+    const res = await fetch(
+      "https://api.dolphy.ca/api/preconstructions/?page_size=10",
+      {
+        next: { revalidate: 10 },
+      }
+    );
+
+    if (!res.ok) {
+      notFound();
+    }
+
+    const resp = await res.json();
+    return resp.results;
+  }
   const torontoData = await getSalesData(INITIAL_OFFSET, INITIAL_LIMIT, CITY);
   const cambridgeData = await getSalesData(
     INITIAL_OFFSET,
@@ -53,6 +71,8 @@ export default async function Home() {
     },
   ];
   const residentialData = await getFilteredRetsData({ saleLease: "Sale" });
+  const preconData = await getData();
+  // console.log(preconData);
   return (
     <>
       <div className="">
@@ -101,42 +121,50 @@ export default async function Home() {
           <div className="container-fluid mt-10 sm:mt-24">
             <PopularCities />
           </div>
-          <div className="sm:mt-40 mt-24">
+          <div className="sm:mt-40 mt-24 container-fluid">
             <div className="flex flex-col md:flex-row justify-between items-center mb-3">
-              <h3 className="main-title font-extrabold text-[2rem] md:text-4xl text-white playfair text-center md:text-start mb-4">
-                Featured Resale Properties
-              </h3>
-              <h4>Explore our resales properties in Canada</h4>
+              <div>
+                <h3 className="main-title font-extrabold text-[2rem] md:text-4xl text-black text-center md:text-start">
+                  Featured Resale Properties
+                </h3>
+                <h4 className="mt-1">
+                  Explore our resale properties in Canada
+                </h4>
+              </div>
               <Link
-                href="/resale"
-                className="bg-primary-color text-white px-5 py-3 hover:no-underline flex items-center"
+                href="/ontario"
+                className="bg-primary-color text-black px-5 py-3 hover:no-underline flex items-center underline hover:underline"
               >
                 View More
               </Link>
             </div>
-            <AdditionalListing newSalesData={residentialData} />
+            <PropertySlider data={residentialData} />
           </div>
-          <div className="mt-4 sm:mt-24">
+          <div className="sm:mt-40 mt-24 container-fluid">
+            <div className="flex flex-col md:flex-row justify-between items-center mb-3">
+              <div>
+                <h3 className="main-title font-extrabold text-[2rem] md:text-4xl text-black text-center md:text-start">
+                  Featured Projects
+                </h3>
+                <h4 className="mt-1">Explore our pre construction projects </h4>
+              </div>
+              <Link
+                href="/pre-construction-homes"
+                className="bg-primary-color text-black px-5 py-3 hover:no-underline flex items-center underline hover:underline"
+              >
+                View More
+              </Link>
+            </div>
+            <PreconPropertySlider data={preconData} numberOfCards={10} />
+          </div>
+
+          {/* <div className="sm:mt-40 mt-24 container-fluid"></div> */}
+          {/* <div className="mt-4 sm:mt-24">
             <SuggestedCity defaultCitiesData={defaultCitiesData} />
-          </div>
+          </div> */}
           {/* <div className="container-fluid mt-10 sm:mt-24">
             <RealEstateNews />
           </div> */}
-          <div className="sm:mt-40 mt-24">
-            <div className="flex flex-col md:flex-row justify-between items-center mb-3">
-              <h3 className="main-title font-extrabold text-[2rem] md:text-4xl text-white playfair text-center md:text-start mb-4">
-                Featured Projects
-              </h3>
-              <h4>Explore our resales properties in Canada</h4>
-              <Link
-                href="/resale"
-                className="bg-primary-color text-white px-5 py-3 hover:no-underline flex items-center"
-              >
-                View More
-              </Link>
-            </div>
-            <AdditionalListing newSalesData={residentialData} />
-          </div>
         </div>
         <div className="">
           <div className="py-md-5"></div>
@@ -150,7 +178,7 @@ export default async function Home() {
                 />
               </div>
               <h2 className=" text-center px-md-4 fs-4 text-md mb-10 font-bold">
-                Contact Dolphy now!
+                Contact Monk Nest now!
               </h2>
               <div className="row row-cols-1 row-cols-md-3 mt-5">
                 <div className="col-md-3"></div>

@@ -21,21 +21,19 @@ export default function CondoCard(props) {
     }
   }
 
-  
-
   return (
     <>
-      <div className="card border-0 shadow-lg rounded-mine my-3 my-md-0 condocard">
+      <div className="card border-0 rounded-mine my-3 my-md-0 condocard">
         <div className="position-relative is-loading">
           <Link
             href={`/pre-construction-homes/${props.city.slug}/${props.slug}`}
             className="mylinkk"
-            target="_blank"
+            // target="_blank"
           >
             {props.image.length > 0 ? (
               <img
                 loading="lazy"
-                src={`https://api.dolphy.ca${props.image[0].image}`}
+                src={`${props.image[0].image}`}
                 layout="responsive"
                 className="img-fluid condocard-img-top rounded-minet"
                 alt={`${props.project_name} located at ${props.project_address} image`}
@@ -67,7 +65,7 @@ export default function CondoCard(props) {
         </div>
         <Link
           href={`/pre-construction-homes/${props.city.slug}/${props.slug}`}
-          className="card-body text-decoration-none text-dark bg-white shadow-lgg rounded-mine"
+          className="card-body text-decoration-none text-dark bg-white shadow-lg rounded-mine"
           target="_blank"
         >
           <div className="card-content pt-2">

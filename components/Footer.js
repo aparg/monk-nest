@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Image } from "react-bootstrap";
 import { useState, useEffect } from "react";
 
-const Footer = ({ cities }) => {
+const Footer = () => {
   const [centered, setCentered] = useState(false);
   const pathname = usePathname();
 
@@ -16,237 +16,103 @@ const Footer = ({ cities }) => {
       setCentered(true);
     }
   }, []);
+
   return (
     <>
-      <footer className="bg-gray-50 mt-20 w-screen">
-        <div className="w-full flex flex-col">
-          <div className="relative overflow-hidden bg-primary-green w-full ">
-            <div className="relative px-8 py-12 md:p-16 xl:p-24 flex flex-col justify-center">
-              <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl text-center font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
-                  Find Residential Real Estate Today
-                </h2>
-              </div>
-              <Link
-                href="tel: 6475274970"
-                className="block flex justify-center"
-              >
-                <button className="bg-white py-2 px-4 rounded-pill self-center mt-3">
-                  <Image src="/icons/call.svg" className="w-5 inline" /> 647 527
-                  4970
-                </button>
+      <footer className="bg-[#F2F2F2] w-[100dvw] pb-20 flex flex-col items-center mt-24 sm:mt-40">
+        <div className="row text-primary-color justify-content-around items-start w-[80%] mt-20">
+          <div className="col-12  mb-6 order-1">
+            <img
+              src="/logo.png"
+              className="w-[173px]"
+              alt="condowong-logo"
+            ></img>
+          </div>
+          <div className="col-12 col-md-4 flex flex-col items-start order-2">
+            <div className="flex flex-col sm:mt-0 mt-5">
+              <span className="my-1 text-primary-color">
+                328 Hwy 7 E, Unit 20 Richmmond Hill, ON L4B 3P7
+              </span>
+              <span className="my-1 text-primary-color">
+                admin@condowong.ca
+              </span>
+              <span className="my-1 text-primary-color">905.882.6882</span>
+            </div>
+          </div>
+          <div className="col-12 col-md-5 flex flex-col sm:items-center items-start mt-8 sm:mt-0 order-4 sm:order-3">
+            <div className="mb-1 text-primary-color">
+              © 2024 Inside Real Estate
+            </div>
+            <div className="h-7"></div>
+            <div className="my-1 text-primary-color">
+              Website designed by{" "}
+              <Link href="sixdesign.ca" target="_blank">
+                <strong className="text-primary-color">SixDesign</strong>
               </Link>
             </div>
           </div>
-          <div className={`container-fluid ${centered && "max-w-[90%]"}`}>
-            <div className="grid grid-cols-2 gap-x-4 md:gap-x-10 mt-12 sm:grid-cols-3 lg:grid-cols-4 sm:mt-16 lg:mt-20 gap-y-6 justify-content-center justify-content-md-start">
-              <div className="col-span-2 sm:col-span-1 lg:pl-12 max-w-[90%]">
-                <p className="text-md font-bold tracking-widest text-black-600 uppercase">
-                  Company
-                </p>
+          <div className="flex flex-row col-12 col-md-2 mt-8 sm:mt-1 order-3 sm:order-4">
+            <Link target="_blank" href="#">
+              <img
+                className="w-3 mx-3"
+                src="/footer-icons/facebook.svg"
+                alt="facebook"
+              ></img>
+            </Link>
 
-                <ul className="space-y-5 flex flex-col justify-start align-start">
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      About{" "}
-                    </Link>
-                  </li>
+            <Link target="_blank" href="#">
+              <img
+                className="w-4 mx-3"
+                src="/footer-icons/instagram.svg"
+                alt="instagram"
+              ></img>
+            </Link>
 
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      Features{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      Works{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      Career{" "}
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-span-2 sm:col-span-1">
-                <p className="text-md font-bold tracking-widest text-black-600 uppercase">
-                  Help
-                </p>
-
-                <ul className="space-y-5">
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      Customer Support{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      Delivery{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      Terms & Conditions{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      Privacy Policy{" "}
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-span-2 sm:col-span-1">
-                <p className="text-md font-bold tracking-widest text-black-600 uppercase">
-                  Company
-                </p>
-
-                <ul className=" space-y-5">
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      Free eBooks{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      Development{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      How to - Blog{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      YouTube Playlist{" "}
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div className="col-span-2 md:col-span-3 lg:col-span-1">
-                <p className="text-md font-bold tracking-widest text-black-600 uppercase"></p>
-
-                <ul className=" flex flex-col justify-start">
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex border-t border-gray-200 py-4 text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      <Image
-                        className="w-6 mr-3"
-                        src="/icons/mail.svg"
-                        alt="contact"
-                      />
-                      Contact Support{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex border-t border-gray-200 py-4 text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      <Image className="w-6 mr-3" src="/icons/call.svg" />{" "}
-                      647-527-4970{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      href="#"
-                      title=""
-                      className="inline-flex border-t border-b border-gray-200 py-4 text-sm font-normal transition-all duration-200 hover:translate-x-1"
-                    >
-                      {" "}
-                      <Image className="w-6 mr-3" src="/icons/support.svg" />
-                      Help Centre{" "}
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <Link target="_blank" href="#">
+              <img
+                className="w-4 mx-3"
+                src="/footer-icons/youtube.svg"
+                alt="youtube"
+              ></img>
+            </Link>
           </div>
-
-          <div className="pt-12 mt-12  border-t border-gray-200 sm:mt-16 lg:mt-20 mb-20">
-            <p className="text-sm font-normal text-gray-900 text-center">
-              © Copyright 2023, All Rights Reserved by Dolphy
-            </p>
-          </div>
+        </div>
+        <div>
+          <h1>MLS Disclaimer</h1>
+          <p>
+            Toronto Real Estate Board (TRREB); All information deemed reliable
+            but not guaranteed. All properties are subject to prior sale, change
+            or withdrawal. Neither listing broker(s) or information provider(s)
+            shall be responsible for any typographical errors, misinformation,
+            misprints and shall be held totally harmless. Listing(s) information
+            is provided for consumer's personal, non-commercial use and may not
+            be used for any purpose other than to identify prospective
+            properties consumers may be interested in purchasing. The data
+            relating to real estate for sale on this website comes in part from
+            the Internet Data Exchange program of the Multiple Listing Service.
+            Real estate listings held by brokerage firms other than MonkNest
+            Real Estate Inc. may be marked with the Internet Data Exchange logo
+            and detailed information about those properties will include the
+            name of the listing broker(s) when required by the MLS. Copyright
+            ©2024 All rights reserved. Last Updated: July 15, 2024 5:02 AM UTC
+          </p>
+          <p>
+            All information deemed reliable but not guaranteed. All properties
+            are subject to prior sale, change or withdrawal. Neither listing
+            broker(s) or information provider(s) shall be responsible for any
+            typographical errors, misinformation, misprints and shall be held
+            totally harmless. Listing(s) information is provided for consumer's
+            personal, non-commercial use and may not be used for any purpose
+            other than to identify prospective properties consumers may be
+            interested in purchasing. The data relating to real estate for sale
+            on this website comes in part from the Internet Data Exchange
+            program of the Multiple Listing Service. Real estate listings held
+            by brokerage firms other than MonkNest Real Estate Inc. may be
+            marked with the Internet Data Exchange logo and detailed information
+            about those properties will include the name of the listing
+            broker(s) when required by the MLS. Copyright ©2024 All rights
+            reserved. Last Updated: July 15, 2024 1:47 AM UTC
+          </p>
         </div>
       </footer>
     </>

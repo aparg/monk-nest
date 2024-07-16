@@ -15,7 +15,7 @@ const config = {
         "1/8": "12.5%",
       },
       colors: {
-        "primary-green": "#217955",
+        "primary-green": "#0C234B",
         "light-lime": "#e1f6b2",
         "primary-red": "#eb7e6c",
         "medium-black": "#222222",

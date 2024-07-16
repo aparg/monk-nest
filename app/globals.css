@@ -269,7 +269,7 @@ nav {
 }
 
 .bva {
-  font-size: 13px !important;
+  font-size: 18px !important;
 }
 
 .roundedPill {
@@ -2323,4 +2323,30 @@ div.dynamic {
 
 .box-shadow-custom {
   box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+/* Precon style */
+.condocard-img-top {
+  width: 100%;
+  max-height: 40rem;
+  height: 25rem !important;
+  object-fit: cover;
+  border-radius: 7px;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.condocard-img-top2 {
+  width: 100%;
+  max-height: 18rem;
+  height: 120px !important;
+  object-fit: cover;
+  border-radius: 7px;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.condocard a:hover,
+.condocard a:focus {
+  text-decoration: none;
+  color: #000000 !important;
 }
