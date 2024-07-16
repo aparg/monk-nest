@@ -1,4 +1,6 @@
-import { resenditialAndCondo } from './residential'
-import { latLong } from './latLong'
+import { resenditialAndCondo, commercial } from "./residential";
 
-export { resenditialAndCondo as resenditial, latLong }
+import { latLong } from "./latLong";
+
+export { resenditialAndCondo as resenditial, latLong };
+export { commercial as commercial, latLong };
