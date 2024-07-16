@@ -59,7 +59,7 @@ export default async function Home({ params }) {
             <h1 className="main-title text-center fs-3 fw-bold fs-gta pt-5 my-4">
               List of Pre Construction Projects in <br /> Canada
             </h1>
-            <h2 className="text-green mt-4 text-center">
+            {/* <h2 className="text-green mt-4 text-center">
               Register Today For VIP First Access
             </h2>
             <p className="text-green mb-4 text-center">
@@ -74,7 +74,7 @@ export default async function Home({ params }) {
               <div className="pb-1 ww">
                 <SearchBar cities={cities} />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="py-5 my-3"></div>

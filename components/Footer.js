@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-[#F2F2F2] w-[100dvw] pb-20 flex flex-col items-center mt-24 sm:mt-40">
-        <div className="row text-primary-color justify-content-around items-start w-[80%] mt-20">
+        <div className="row text-primary-color justify-content-between items-start w-[80%] mt-20">
           <div className="col-12  mb-6 order-1">
             <img
               src="/logo.png"
@@ -28,7 +28,7 @@ const Footer = () => {
               alt="condowong-logo"
             ></img>
           </div>
-          <div className="col-12 col-md-4 flex flex-col items-start order-2">
+          <div className="col-12 col-md-4 flex flex-col items-start order-2 pl-3">
             <div className="flex flex-col sm:mt-0 mt-5">
               <span className="my-1 text-primary-color">
                 328 Hwy 7 E, Unit 20 Richmmond Hill, ON L4B 3P7
@@ -42,12 +42,6 @@ const Footer = () => {
               © 2024 Inside Real Estate
             </div>
             <div className="h-7"></div>
-            <div className="my-1 text-primary-color">
-              Website designed by{" "}
-              <Link href="sixdesign.ca" target="_blank">
-                <strong className="text-primary-color">SixDesign</strong>
-              </Link>
-            </div>
           </div>
           <div className="flex flex-row col-12 col-md-2 mt-8 sm:mt-1 order-3 sm:order-4">
             <Link target="_blank" href="#">
@@ -75,7 +69,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="order-6">
-            <h1>MLS Disclaimer</h1>
+            <h1 className="text-xl font-bold mt-8">MLS Disclaimer</h1>
             <p>
               Toronto Real Estate Board (TRREB); All information deemed reliable
               but not guaranteed. All properties are subject to prior sale,
@@ -92,9 +86,9 @@ const Footer = () => {
               with the Internet Data Exchange logo and detailed information
               about those properties will include the name of the listing
               broker(s) when required by the MLS. Copyright ©2024 All rights
-              reserved. Last Updated: July 15, 2024 5:02 AM UTC
+              reserved.
             </p>
-            <p>
+            <p className="mt-4">
               All information deemed reliable but not guaranteed. All properties
               are subject to prior sale, change or withdrawal. Neither listing
               broker(s) or information provider(s) shall be responsible for any
@@ -109,9 +103,14 @@ const Footer = () => {
               Real Estate Inc. may be marked with the Internet Data Exchange
               logo and detailed information about those properties will include
               the name of the listing broker(s) when required by the MLS.
-              Copyright ©2024 All rights reserved. Last Updated: July 15, 2024
-              1:47 AM UTC
+              Copyright ©2024 All rights reserved.
             </p>
+          </div>
+          <div className="my-1 text-primary-color text-center order-7">
+            Website designed by{" "}
+            <Link href="sixdesign.ca" target="_blank">
+              <strong className="text-primary-color">SixDesign</strong>
+            </Link>
           </div>
         </div>
       </footer>

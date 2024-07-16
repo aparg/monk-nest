@@ -38,30 +38,15 @@ const page = async ({ params }) => {
 
 export default page;
 
-// export async function generateMetadata({ params }, parent) {
-//   let saleLeaseValue;
-//   let type;
-//   if (Object.keys(saleLease).includes(params.slug1)) {
-//     saleLeaseValue = params.slug1;
-//   } else if (Object.keys(saleLease).includes(params.slug2)) {
-//     saleLeaseValue = params.slug2;
-//   }
-//   if (Object.keys(houseType).includes(params.slug1)) {
-//     type = capitalizeFirstLetter(params.slug1);
-//   } else if (Object.keys(houseType).includes(params.slug2)) {
-//     type = capitalizeFirstLetter(params.slug2);
-//   }
-//   return {
-//     ...parent,
-//     alternates: {
-//       canonical: `https://dolphy-commercial-two.vercel.app/ontario/${type}/${saleLeaseValue}/${type}`,
-//     },
-//     openGraph: {
-//       images: "/logo/logo-black.svg",
-//     },
-//     title: `Find ${type} Real Estate ${saleLease[saleLeaseValue]?.name} in ${params.city}`,
-//     description: `Explore top ${type}${
-//       plural[capitalizeFirstLetter(type)]
-//     } in ${params.city} and select the best ones`,
-//   };
-// }
+const metadata = {
+  title: "Monkey Nest",
+  description: "Real Estate",
+  icons: {
+    icon: "/logo.png",
+    // apple: '/path/to/apple-icon.png',
+  },
+};
+
+export async function generateMetadata() {
+  return metadata;
+}
