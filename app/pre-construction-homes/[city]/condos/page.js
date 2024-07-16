@@ -1,4 +1,4 @@
-import CondoCard from "@/components/CondoCard";
+import CondoCard from "@/components/PreconPropertyCard";
 import BottomContactForm from "@/components/BottomContactForm";
 import { notFound } from "next/navigation";
 import DolphyAdvantage from "@/components/DolphyAdvantage";

@@ -33,9 +33,7 @@ const Footer = () => {
               <span className="my-1 text-primary-color">
                 328 Hwy 7 E, Unit 20 Richmmond Hill, ON L4B 3P7
               </span>
-              <span className="my-1 text-primary-color">
-                admin@condowong.ca
-              </span>
+              <span className="my-1 text-primary-color">admin@monknest.ca</span>
               <span className="my-1 text-primary-color">905.882.6882</span>
             </div>
           </div>
@@ -76,43 +74,45 @@ const Footer = () => {
               ></img>
             </Link>
           </div>
-        </div>
-        <div>
-          <h1>MLS Disclaimer</h1>
-          <p>
-            Toronto Real Estate Board (TRREB); All information deemed reliable
-            but not guaranteed. All properties are subject to prior sale, change
-            or withdrawal. Neither listing broker(s) or information provider(s)
-            shall be responsible for any typographical errors, misinformation,
-            misprints and shall be held totally harmless. Listing(s) information
-            is provided for consumer's personal, non-commercial use and may not
-            be used for any purpose other than to identify prospective
-            properties consumers may be interested in purchasing. The data
-            relating to real estate for sale on this website comes in part from
-            the Internet Data Exchange program of the Multiple Listing Service.
-            Real estate listings held by brokerage firms other than MonkNest
-            Real Estate Inc. may be marked with the Internet Data Exchange logo
-            and detailed information about those properties will include the
-            name of the listing broker(s) when required by the MLS. Copyright
-            ©2024 All rights reserved. Last Updated: July 15, 2024 5:02 AM UTC
-          </p>
-          <p>
-            All information deemed reliable but not guaranteed. All properties
-            are subject to prior sale, change or withdrawal. Neither listing
-            broker(s) or information provider(s) shall be responsible for any
-            typographical errors, misinformation, misprints and shall be held
-            totally harmless. Listing(s) information is provided for consumer's
-            personal, non-commercial use and may not be used for any purpose
-            other than to identify prospective properties consumers may be
-            interested in purchasing. The data relating to real estate for sale
-            on this website comes in part from the Internet Data Exchange
-            program of the Multiple Listing Service. Real estate listings held
-            by brokerage firms other than MonkNest Real Estate Inc. may be
-            marked with the Internet Data Exchange logo and detailed information
-            about those properties will include the name of the listing
-            broker(s) when required by the MLS. Copyright ©2024 All rights
-            reserved. Last Updated: July 15, 2024 1:47 AM UTC
-          </p>
+          <div className="order-6">
+            <h1>MLS Disclaimer</h1>
+            <p>
+              Toronto Real Estate Board (TRREB); All information deemed reliable
+              but not guaranteed. All properties are subject to prior sale,
+              change or withdrawal. Neither listing broker(s) or information
+              provider(s) shall be responsible for any typographical errors,
+              misinformation, misprints and shall be held totally harmless.
+              Listing(s) information is provided for consumer's personal,
+              non-commercial use and may not be used for any purpose other than
+              to identify prospective properties consumers may be interested in
+              purchasing. The data relating to real estate for sale on this
+              website comes in part from the Internet Data Exchange program of
+              the Multiple Listing Service. Real estate listings held by
+              brokerage firms other than MonkNest Real Estate Inc. may be marked
+              with the Internet Data Exchange logo and detailed information
+              about those properties will include the name of the listing
+              broker(s) when required by the MLS. Copyright ©2024 All rights
+              reserved. Last Updated: July 15, 2024 5:02 AM UTC
+            </p>
+            <p>
+              All information deemed reliable but not guaranteed. All properties
+              are subject to prior sale, change or withdrawal. Neither listing
+              broker(s) or information provider(s) shall be responsible for any
+              typographical errors, misinformation, misprints and shall be held
+              totally harmless. Listing(s) information is provided for
+              consumer's personal, non-commercial use and may not be used for
+              any purpose other than to identify prospective properties
+              consumers may be interested in purchasing. The data relating to
+              real estate for sale on this website comes in part from the
+              Internet Data Exchange program of the Multiple Listing Service.
+              Real estate listings held by brokerage firms other than MonkNest
+              Real Estate Inc. may be marked with the Internet Data Exchange
+              logo and detailed information about those properties will include
+              the name of the listing broker(s) when required by the MLS.
+              Copyright ©2024 All rights reserved. Last Updated: July 15, 2024
+              1:47 AM UTC
+            </p>
+          </div>
         </div>
       </footer>
     </>
