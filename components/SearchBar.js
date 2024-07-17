@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Autosuggest from "react-autosuggest";
 import { useRouter } from "next/navigation";
+import { color } from "framer-motion";
 
 const SearchBar = () => {
   const [value, setValue] = useState("");
@@ -125,6 +126,7 @@ const SearchBar = () => {
 
   // Autosuggest input props
   const inputProps = {
+    color: "black",
     placeholder: "Search for city",
     value,
     onChange: (event, { newValue }) => setValue(newValue),

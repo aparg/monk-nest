@@ -94,7 +94,7 @@ export default async function Home() {
         className="relative justify-center md:max-md:mt-10 items-center h-auto w-screen"
         id="hero"
       >
-        <div className="relative h-[500px] w-full">
+        <div className="relative h-[250px] w-full">
           <Image
             src="/hero-image.png"
             alt="Canadian home"
@@ -103,7 +103,7 @@ export default async function Home() {
             className="brightness-75"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
-            <h1 className="text-4xl md:text-6xl font-bold text-center mb-4 playfair md:leading-[5rem] playfair">
+            <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 playfair md:leading-[3rem] playfair">
               Find your perfect home <br /> in Canada
             </h1>
             {/* <div className="w-full max-w-2xl">
@@ -196,7 +196,7 @@ export default async function Home() {
       </div>
       <div className="py-3 py-md-5 mt-10 md:mt-24">
         <div className="my-5 py-5">
-          <div className="position-relative bg-lightblue container-fluid2">
+          <div className="position-relative bg-lightblue container-fluid">
             <div className="side-img">
               <img
                 src="/label.png"
@@ -227,13 +227,13 @@ export default async function Home() {
       <div className="mt-10 sm:mt-24">
         <div className="py-5 my-5" id="mycontact">
           <div className="container-fluid">
-            <div className="row justify-content-center">
+            {/* <div className="row justify-content-center">
               <img
                 src="/contact-bottom-2.png"
                 alt="dce"
                 className="img-fluid w-25 w-smm-50 mb-3"
               />
-            </div>
+            </div> */}
             <h2 className=" text-center px-md-4 fs-4 text-md mb-10 font-bold">
               Contact Monk Nest now!
             </h2>
