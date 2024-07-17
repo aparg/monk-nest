@@ -1,7 +1,6 @@
 import CondoCard from "@/components/PreconPropertyCard";
 import BottomContactForm from "@/components/BottomContactForm";
 import { notFound } from "next/navigation";
-import DolphyAdvantage from "@/components/DolphyAdvantage";
 import PreconSchema from "@/components/PreconSchema";
 import FixedContactButton from "@/components/FixedContactButton";
 import { fetchBlogPostByCity } from "@/api/blogs";
@@ -154,11 +153,10 @@ export default async function Home({ params }) {
 
           <div className="pt-5 mt-5"></div>
           <div className="pt-5 mt-5"></div>
-          <DolphyAdvantage></DolphyAdvantage>
           <div className="pt-5 mt-5"></div>
           <div className="mb-5">
             <h3 className="fs-2">
-              <strong>The Dolphy Insights</strong> - Know Whats Happening in{" "}
+              <strong>The Monk Nest Insights</strong> - Know Whats Happening in{" "}
               {CapitalizeFirst(data.city.name)}
             </h3>
             <p>
@@ -195,7 +193,7 @@ export default async function Home({ params }) {
                 />
               </div>
               <h2 className="fw-mine text-center px-md-4 fs-4">
-                Contact Dolphy Team Today
+                Contact Monk Nest Team Today
               </h2>
               <div className="row row-cols-1 row-cols-md-3 mt-3">
                 <div className="col-md-3"></div>

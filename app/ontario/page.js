@@ -32,7 +32,7 @@ const page = async ({ params }) => {
             >
               <ol className="breadcrumb">
                 <li className="breadcrumb-item ">
-                  <Link href="/">Dolphy</Link>
+                  <Link href="/">Monk Nest</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   ON

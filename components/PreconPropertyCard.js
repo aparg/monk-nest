@@ -23,7 +23,7 @@ export default function CondoCard(props) {
 
   return (
     <>
-      <div className="card border-0 rounded-mine my-3 my-md-0 condocard">
+      <div className="card border-0 rounded-mine my-3 my-md-0 condocard h-full flex-grow">
         <div className="position-relative is-loading">
           <Link
             href={`/pre-construction-homes/${props.city.slug}/${props.slug}`}
@@ -73,7 +73,7 @@ export default function CondoCard(props) {
             <h4 className="mb-2 cardd-subtitle">
               {checkPricing(props.price_starting_from)}
             </h4>
-            <p className="mb-0">{props.project_address}</p>
+            {/* <p className="mb-0">{props.project_address}</p> */}
             <p className="card-secondary-title mb-0">
               {props.project_type} in {props.city.name} | Updated{" "}
               {daysCount(props.last_updated)}

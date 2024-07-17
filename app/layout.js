@@ -8,6 +8,7 @@ import NextTopLoader from "nextjs-toploader";
 // import { Figtree } from "next/font/google";
 import { Providers } from "./providers";
 import localFont from "next/font/local";
+import { Lato } from "next/font/google";
 
 const satoshi = localFont({
   src: [

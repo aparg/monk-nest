@@ -5,7 +5,7 @@ import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import CondoCard from "./PreconPropertyCard";
 import useDeviceView from "@/helpers/useDeviceView";
 
-const PreconPropertySlider = ({ numberOfCards = 6, data }) => {
+const PreconPropertySlider = ({ numberOfCards = 5, data }) => {
   const scrollRef = useRef(null); //used to hold scroll value
   const cardRef = useRef(null); //used to hold card width value
   const { isMobileView } = useDeviceView();
@@ -27,8 +27,8 @@ const PreconPropertySlider = ({ numberOfCards = 6, data }) => {
   };
 
   return (
-    <div className="relative mb-8 shadow-md flex flex-row">
-      <div className="btns flex justify-between">
+    <div className="relative mb-8  flex flex-row">
+      {/* <div className="btns flex justify-between">
         <button
           className="scroll-left absolute start-0"
           title="scroll left"
@@ -43,10 +43,10 @@ const PreconPropertySlider = ({ numberOfCards = 6, data }) => {
         >
           <SlArrowRight size={16} color="black" />
         </button>
-      </div>
+      </div> */}
       <div
-        className={`w-full row row-cols-lg-${numberOfCards} row-cols-md-6 row-cols-1 py-2`}
-        id="slider"
+        className={`w-full row row-cols-lg-${numberOfCards} row-cols-md-5 row-cols-1 py-2`}
+        // id="slider"
         ref={scrollRef}
       >
         {data?.map((value, index) => {

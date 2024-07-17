@@ -2350,3 +2350,10 @@ div.dynamic {
   text-decoration: none;
   color: #000000 !important;
 }
+
+.dolphy-advantage-image img {
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 7px;
+}

@@ -1,9 +1,9 @@
 export default function DolphyAdvantage() {
   return (
-    <>
+    <div className="container-fluid">
       <div className="py-md-5">
         <h3 className="fs-2">
-          <strong>The Dolphy Advantage</strong> - Always people at heart
+          <strong>The Monk Nest Advantage</strong> - Always people at heart
         </h3>
         <p>
           Working hand in hand with leading Pre construction Homes, Condos
@@ -47,6 +47,6 @@ export default function DolphyAdvantage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

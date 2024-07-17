@@ -93,7 +93,7 @@ const Navbar = (props) => {
             </Link> */}
 
             <Link href="/" className="d-flex align-items-center">
-              <Image className="w-28 hidden md:block" src="/logo.png" />
+              <Image className="w-[200px] hidden md:block" src="/logo.png" />
             </Link>
             {/* <h1 className="w-20 md:hidden" src={blackLogoPath} /> */}
           </div>
@@ -136,7 +136,7 @@ const Navbar = (props) => {
               stroke="currentColor"
             >
               <path
-                strokeLinecap="round"
+                stroke-linecap="round"
                 stroke-linejoin="round"
                 strokeWidth="2"
                 d="M4 8h16M4 16h16"
@@ -160,144 +160,12 @@ const Navbar = (props) => {
           </button>
 
           <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-8">
-            <Link
-              href="/calculator#mortgageCalculator"
-              title=""
-              className={`text-base font-normal transition-all duration-200 ${
-                isHomePage &&
-                !isSticky &&
-                "lg:text-black hover:text-green-200 active:text-primary-green focus:text-primary-green"
-              } ${
-                (isSticky || !isHomePage) &&
-                "text-black hover:text-primary-green"
-              }
-               ${!isHomePage && "text-black"}`}
-            >
-              {" "}
-              Mortgage Calculator
-            </Link>
-            <Link
-              href={`/calculator#propertyTax`}
-              title=""
-              className={`text-base font-normal transition-all duration-200 ${
-                isHomePage &&
-                !isSticky &&
-                "lg:text-black hover:text-green-200 active:text-primary-green focus:text-primary-green"
-              } ${
-                (isSticky || !isHomePage) &&
-                "text-black hover:text-primary-green"
-              }
-               ${!isHomePage && "text-black"}`}
-            >
-              {" "}
-              Property Tax Calculator{" "}
-            </Link>
-            {/* <Dropdown
-              name="Properties for Sale"
-              options={[
-                {
-                  name: "Condos for Sale",
-                  link: generateURL({ houseTypeVal: "condo" }),
-                },
-                {
-                  name: "Detached Properties for Sale",
-                  link: generateURL({ houseTypeVal: "detached" }),
-                },
-                {
-                  name: "Semi Detached Properties for Sale",
-                  link: generateURL({
-                    houseTypeVal: "semiDetached",
-                  }),
-                },
-                {
-                  name: "Town Houses for Sale",
-                  link: generateURL({
-                    houseTypeVal: "townHouse",
-                  }),
-                },
-                {
-                  name: "Duplex Properties for Sale",
-                  link: generateURL({
-                    houseTypeVal: "duplex",
-                  }),
-                },
-                {
-                  name: "Triplex Properties for Sale",
-                  link: generateURL({ houseTypeVal: "triplex" }),
-                },
-              ]}
-              text={isSticky || !isHomePage ? "black" : "white"}
-            /> */}
-            {/* <Dropdown
-              name="Compare"
-              options={[
-                ...comparisionData?.map((data) => {
-                  return { name: data };
-                }),
-                {
-                  name: "View Comparision",
-                  link: `/compare/${comparisionData.join("-")}`,
-                },
-              ]}
-              text={isSticky || !isHomePage ? "black" : "white"}
-            /> */}
-            {/* Comparisons */}
-            {/* <Link
-              href={`/compare`}
-              title=""
-              className={`text-base font-normal transition-all duration-200 ${
-                isHomePage &&
-                !isSticky &&
-                "lg:text-white hover:text-green-200 active:text-primary-green focus:text-primary-green"
-              } ${
-                (isSticky || !isHomePage) &&
-                "text-black hover:text-primary-green"
-              }
-               ${!isHomePage && "text-black"}`}
-            >
-              {" "}
-              Your comparisons{" "}
-            </Link> */}
-            {/* <Link
-              href="#"
-              title=""
-              className={`text-base font-normal transition-all duration-200 ${
-                isHomePage &&
-                !isSticky &&
-                "lg:text-white hover:text-green-200 active:text-primary-green focus:text-primary-green"
-              } ${
-                (isSticky || !isHomePage) &&
-                "text-black hover:text-primary-green"
-              }
-               ${!isHomePage && "text-black"}`}
-            >
-              {" "}
-              Cities{" "}
-            </Link> */}
-
             <Dropdown
               name="Cities"
               text={isSticky || !isHomePage ? "black" : "white"}
               options={cities}
             />
 
-            {/* <Link
-              href="#"
-              title=""
-              className={`text-base font-normal transition-all duration-200 ${
-                isHomePage &&
-                !isSticky &&
-                "lg:text-white hover:text-green-200 active:text-primary-green focus:text-primary-green"
-              } ${
-                (isSticky || !isHomePage) &&
-                "text-black hover:text-primary-green"
-              }
-               ${!isHomePage && "text-black"}`}
-            >
-              {" "}
-              Resources{" "}
-            </Link> */}
-
             <Link
               href="#"
               title=""
@@ -305,14 +173,55 @@ const Navbar = (props) => {
                 isHomePage &&
                 !isSticky &&
                 "lg:text-black hover:text-green-200 active:text-primary-green focus:text-primary-green"
-              } ${
-                (isSticky || !isHomePage) &&
-                "text-black hover:text-primary-green"
-              }
+              } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
                ${!isHomePage && "text-black"}`}
             >
+              Pre-Construction Homes
+            </Link>
+            <Link
+              href="#"
+              title=""
+              className={`text-base font-normal transition-all duration-200 ${
+                isHomePage &&
+                !isSticky &&
+                "lg:text-black hover:text-green-200 active:text-primary-green focus:text-primary-green"
+              } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
+               ${!isHomePage && "text-black"}`}
+            >
+              Resales
+            </Link>
+            <Link
+              href="#"
+              title=""
+              className={`text-base font-normal transition-all duration-200 ${
+                isHomePage &&
+                !isSticky &&
+                "lg:text-black hover:text-green-200 active:text-primary-green focus:text-primary-green"
+              } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
+               ${!isHomePage && "text-black"}`}
+            >
+              Finance
+            </Link>
+            <Link
+              href="#"
+              title=""
+              className={`text-base font-normal transition-all duration-200 ${
+                isHomePage &&
+                !isSticky &&
+                "lg:text-black hover:text-green-200 active:text-primary-green focus:text-primary-green"
+              } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
+               ${!isHomePage && "text-black"}`}
+            >
+              Agents
+            </Link>
+
+            <Link
+              href="#"
+              title=""
+              className={`text-base font-normal transition-all duration-200 text-white bg-primary-green py-2 px-3 rounded-md hover:text-white visited:text-white focus:text-white active:text-white`}
+            >
               {" "}
-              Contact{" "}
+              Contact Now{" "}
             </Link>
           </div>
 

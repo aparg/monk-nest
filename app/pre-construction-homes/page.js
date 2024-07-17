@@ -57,7 +57,7 @@ export default async function Home({ params }) {
           <div className="col">
             <div className="py-md-4"></div>
             <h1 className="main-title text-center fs-3 fw-bold fs-gta pt-5 my-4">
-              List of Pre Construction Projects in <br /> Canada
+              List of Pre Construction Projects in Canada
             </h1>
             {/* <h2 className="text-green mt-4 text-center">
               Register Today For VIP First Access
@@ -126,7 +126,6 @@ export default async function Home({ params }) {
           </div>
           <div className="py-2"></div>
           <div className="pt-5 mt-5"></div>
-          <DolphyAdvantage />
           <div className="py-5 my-5" id="mycontact">
             <div className="container-fluid">
               <div className="row justify-content-center">
@@ -137,7 +136,7 @@ export default async function Home({ params }) {
                 />
               </div>
               <h2 className="fw-mine text-center px-md-4 fs-4">
-                Contact Dolphy Team Today
+                Contact Monk Nest Team Today
               </h2>
               <div className="row row-cols-1 row-cols-md-3 mt-3">
                 <div className="col-md-3"></div>
