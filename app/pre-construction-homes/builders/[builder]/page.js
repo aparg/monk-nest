@@ -66,7 +66,7 @@ export default async function BuilderSingle({ params }) {
       <div className="pt-4 position-relative">
         <div className="container-fluid">
           <div className="pb-4">
-            <h1 className="main-title text-center">
+            <h1 className="main-title mw text-center">
               New Construction Homes by {CapitalizeFirst(params.builder)}
             </h1>
             <div className="row row-cols-1 row-cols-md-3">
@@ -94,7 +94,7 @@ export default async function BuilderSingle({ params }) {
               <div className="row row-cols-1 row-cols-md-3">
                 <div className="col-md-2"></div>
                 <div className="col-md-8">
-                  <h2 className="main-title text-center mb-4">
+                  <h2 className="main-title mw text-center mb-4">
                     Projects by {CapitalizeFirst(params.builder)}
                   </h2>
                   <div className="row row-cols-1 row-cols-md-4 row-cols-lg-4 gy-4 gx-3 gx-lg-2">

@@ -63,7 +63,7 @@ export async function generateMetadata({ params }, parent) {
     openGraph: {
       images: retImage(data.preconstructions),
     },
-    description: `${city} upcoming pre construction Townhomes. Check out ${data.preconstructions.length}+ new construction townhomes on Dolphy. Floor plans & pricing updated for upcoming new construction townhomes in ${city}`,
+    description: `${city} upcoming pre construction Townhomes. Check out ${data.preconstructions.length}+ new construction townhomes on Monk Nest. Floor plans & pricing updated for upcoming new construction townhomes in ${city}`,
   };
 }
 
@@ -78,7 +78,7 @@ export default async function Home({ params }) {
       <div className="pt-4 position-relative">
         <div className="container-fluid">
           <div className="pb-0">
-            <h1 className="main-title text-center text-md-start fs-mine mb-0">
+            <h1 className="main-title mw text-center text-md-start fs-mine mb-0">
               {`${
                 data.preconstructions.length
               }+ Active New Construction Townhomes in ${CapitalizeFirst(
@@ -158,7 +158,7 @@ export default async function Home({ params }) {
           <div className="pt-5 mt-5"></div>
           <div className="mb-5">
             <h3 className="fs-2">
-              <strong>The Dolphy Insights</strong> - Know Whats Happening in{" "}
+              <strong>The Monk Nest Insights</strong> - Know Whats Happening in{" "}
               {CapitalizeFirst(data.city.name)}
             </h3>
             <p>

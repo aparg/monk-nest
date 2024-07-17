@@ -61,7 +61,7 @@ const satoshi = localFont({
 //   alternates: {
 //     canonical: `https://dolphy.ca/`,
 //   },
-//   title: "Dolphy - Commercial Real Estate for Sale in Ontario",
+//   title: "Monk Nest - Commercial Real Estate for Sale in Ontario",
 //   description:
 //     "Find the latest Commercial Real Estate for sale in Ontario with the Ontario's most user-friendly portal. Search real estate to buy in Ontario.",
 //   icons: {

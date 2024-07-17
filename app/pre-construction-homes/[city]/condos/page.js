@@ -63,7 +63,7 @@ export async function generateMetadata({ params }, parent) {
     openGraph: {
       images: retImage(data.preconstructions),
     },
-    description: `${city} upcoming pre construction Condos. Check out ${data.preconstructions.length}+ new construction condos on Dolphy. Floor plans & pricing updated for upcoming new construction condos in ${city}`,
+    description: `${city} upcoming pre construction Condos. Check out ${data.preconstructions.length}+ new construction condos on Monk Nest. Floor plans & pricing updated for upcoming new construction condos in ${city}`,
   };
 }
 
@@ -78,7 +78,7 @@ export default async function Home({ params }) {
       <div className="pt-4 position-relative">
         <div className="container-fluid">
           <div className="pb-0">
-            <h1 className="main-title text-center text-md-start fs-mine mb-0">
+            <h1 className="main-title mw text-center text-md-start fs-mine mb-0">
               {`${
                 data.preconstructions.length
               }+ Active  New Construction Condos in ${CapitalizeFirst(

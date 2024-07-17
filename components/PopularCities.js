@@ -62,7 +62,7 @@ const cardsData = [
 const PopularCities = () => {
   return (
     <div className="">
-      <h3 className="main-title fs-2">Featured Areas</h3>
+      <h3 className="main-title mw fs-2">Featured Areas</h3>
       <h4 className="mt-1">Explore our 9 featured areas in Canada</h4>
       <div className="grid grid-cols-3 gap-4 items-center w-full justify-center md:justify-start items-center flex-wrap lg:mt-2">
         {cardsData.map((card) => (

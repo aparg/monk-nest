@@ -84,7 +84,7 @@ export default async function Home({ params }) {
       <div className="pt-4 position-relative">
         <div className="container-fluid">
           <div className="pb-0">
-            <h1 className="main-title text-center text-md-start fs-mine mb-0">
+            <h1 className="main-title mw text-center text-md-start fs-mine mb-0">
               {`${
                 data.preconstructions.length
               }+ Active Upcoming New Construction Homes in ${CapitalizeFirst(
@@ -143,7 +143,7 @@ export default async function Home({ params }) {
           <div className="container-fluid d-flex gap-2 flex-column align-items-center flex-md-row justify-content-md-start align-items-md-center fw-normal">
             <div className="d-flex">
               <h4 className="fs-6 fw-bold text-mine">
-                Hey Dolphy! I am looking for
+                Hey Monk Nest! I am looking for
               </h4>
               <h4 className="fs-6 fw-bold d-flex align-items-center mx-1 border-bottom2">
                 All
@@ -210,7 +210,7 @@ export default async function Home({ params }) {
           <div className="pt-5 mt-5"></div>
           <div className="mb-5">
             <h3 className="fs-2">
-              <strong>The Dolphy Insights</strong> - Know Whats Happening in{" "}
+              <strong>The Monk Nest Insights</strong> - Know Whats Happening in{" "}
               {CapitalizeFirst(data.city.name)}
             </h3>
             <p>

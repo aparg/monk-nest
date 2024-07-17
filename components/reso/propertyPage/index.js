@@ -117,7 +117,7 @@ const PropertyPage = ({ main_data }) => {
                 <div className="flex flex-col">
                   <div className="flex flex-col items-start">
                     <div className="flex flex-row items-center">
-                      <h3 className="main-title fs-1">C{price}</h3>
+                      <h3 className="main-title mw fs-1">C{price}</h3>
                       <div className="flex items-center">
                         <Image
                           className="w-4 h-4 mx-1"

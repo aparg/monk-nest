@@ -59,11 +59,11 @@ const AdditionalListing = ({
         <div className="w-full flex flex-row justify-between items-center">
           {!title ? (
             !houseType ? (
-              <h3 className="main-title fs-3 fs-sm-2">
+              <h3 className="main-title mw fs-3 fs-sm-2">
                 Explore New {houseType ? `${houseType}` : ``} Listings in {city}
               </h3>
             ) : (
-              <h3 className="main-title fs-3 fs-sm-2 ">
+              <h3 className="main-title mw fs-3 fs-sm-2 ">
                 Continue searching{" "}
                 {capitalizeFirstLetter(modifyType(houseType))}
                 {`${
@@ -79,7 +79,7 @@ const AdditionalListing = ({
               </h3>
             )
           ) : (
-            <h3 className="main-title fs-3 fs-sm-2 ">{title}</h3>
+            <h3 className="main-title mw fs-3 fs-sm-2 ">{title}</h3>
           )}
           <a
             // href={`/ontario${formattedCity ? `/${formattedCity}` : ""}${

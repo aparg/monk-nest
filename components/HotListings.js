@@ -40,7 +40,7 @@ const HotListings = ({ salesData }) => {
     >
       <div className="w-full flex flex-row justify-between">
         <h3
-          className={`main-title fs-2 fs-sm-2 ${
+          className={`main-title mw fs-2 fs-sm-2 ${
             isMobileView ? "pt-3" : "pt-4"
           }`}
         >

@@ -52,7 +52,7 @@ const PreconPropertySlider = ({ numberOfCards = 5, data }) => {
         {data?.map((value, index) => {
           // console.log(value);
           return (
-            <div className="px-2" ref={cardRef}>
+            <div className="px-2" key={index} ref={cardRef}>
               <CondoCard
                 {...value}
                 // link={`/${value.name.replace(" ", "-")}`}

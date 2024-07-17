@@ -96,7 +96,7 @@ const SearchBar = () => {
     <div>
       <Link
         href={`/${suggestion.province.toLowerCase()}/${suggestion.city.toLowerCase()}`}
-        className="ha-link  "
+        className="ha-link"
       >
         <div className="d-flex justify-content-between me-3">
           <div className="d-flex gap-1 justify-content-start">

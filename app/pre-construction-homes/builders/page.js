@@ -33,8 +33,8 @@ export async function generateMetadata({ params }, parent) {
     openGraph: {
       images: "/social/dolphy-builders.jpg",
     },
-    title: `Discover Dolphy's Premier Selection of Over ${data.count}+ Preconstruction Home Builders`,
-    description: `From industry veteran builders to up-and-coming talent, Dolphy's ${data.count}+ partnered builders offeryears of experience along with creative vision and attentive service.`,
+    title: `Discover Monk Nest's Premier Selection of Over ${data.count}+ Preconstruction Home Builders`,
+    description: `From industry veteran builders to up-and-coming talent, Monk Nest's ${data.count}+ partnered builders offeryears of experience along with creative vision and attentive service.`,
   };
 }
 
@@ -46,7 +46,7 @@ export default async function Builders() {
       <div className="pt-4 position-relative">
         <div className="container-fluid">
           <div className="py-4 pt-5 text-center">
-            <h1 className="main-title mb-4 fs-big">
+            <h1 className="main-title mw mb-4 fs-big">
               Leading Home Builders in Canada
             </h1>
             <div className="row row-cols-1 row-cols-md-3">

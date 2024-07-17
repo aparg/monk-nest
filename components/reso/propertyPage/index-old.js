@@ -1,24 +1,24 @@
-'use client'
-import React, { useState, useEffect } from 'react'
+"use client";
+import React, { useState, useEffect } from "react";
 
-import CompareButton from '@/components/CompareButton'
-import { Image } from 'react-bootstrap'
+import CompareButton from "@/components/CompareButton";
+import { Image } from "react-bootstrap";
 
-import TimeAgo from '@/components/TimeAgo'
+import TimeAgo from "@/components/TimeAgo";
 
 //ICONS
-import { IoBedOutline } from 'react-icons/io5'
-import { LuBath } from 'react-icons/lu'
+import { IoBedOutline } from "react-icons/io5";
+import { LuBath } from "react-icons/lu";
 
 //CUSTOM HOOKS
-import useDeviceView from '@/helpers/useDeviceView'
+import useDeviceView from "@/helpers/useDeviceView";
 
 //CONSTANT
-import { saleLease } from '@/constant'
+import { saleLease } from "@/constant";
 
 const PropertyPage = ({ main_data }) => {
-  const [navbar, setNavbar] = useState(false)
-  const { isMobileView } = useDeviceView()
+  const [navbar, setNavbar] = useState(false);
+  const { isMobileView } = useDeviceView();
   const getCommunityFeatures = () => {
     const {
       PropertyFeatures1,
@@ -27,7 +27,7 @@ const PropertyPage = ({ main_data }) => {
       PropertyFeatures4,
       PropertyFeatures5,
       PropertyFeatures6,
-    } = main_data
+    } = main_data;
 
     return [
       PropertyFeatures1,
@@ -36,56 +36,56 @@ const PropertyPage = ({ main_data }) => {
       PropertyFeatures4,
       PropertyFeatures5,
       PropertyFeatures6,
-    ].join(', ')
-  }
+    ].join(", ");
+  };
 
   const formatNumber = (value) => {
     // Check if the value is not null or undefined
     if (value != null) {
-      return Number(value).toLocaleString('en-US')
+      return Number(value).toLocaleString("en-US");
     } else {
       // Handle the case where the value is null or undefined
-      return 'N/A' // or any default value or message you prefer
+      return "N/A"; // or any default value or message you prefer
     }
-  }
+  };
 
   function formatCurrency(value) {
     // Check if the value is not null or undefined
     if (value != null) {
-      return Number(value).toLocaleString('en-US', {
-        style: 'currency',
-        currency: 'USD',
+      return Number(value).toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD",
         maximumFractionDigits: 0,
-      })
+      });
     } else {
       // Handle the case where the value is null or undefined
-      return 'N/A' // or any default value or message you prefer
+      return "N/A"; // or any default value or message you prefer
     }
   }
 
   const handleScrollToContactAgent = () => {
-    const element = document.getElementById('contact')
+    const element = document.getElementById("contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
-  const dashedStreetName = `${main_data.Street}-${main_data.StreetName}-${main_data.StreetAbbreviation}`
+  const dashedStreetName = `${main_data.Street}-${main_data.StreetName}-${main_data.StreetAbbreviation}`;
 
-  const price = formatCurrency(main_data?.ListPrice)
-  const TaxAnnualAmount = formatCurrency(main_data?.Taxes)
-  const AssociationFee = formatCurrency(main_data?.AddlMonthlyFees)
+  const price = formatCurrency(main_data?.ListPrice);
+  const TaxAnnualAmount = formatCurrency(main_data?.Taxes);
+  const AssociationFee = formatCurrency(main_data?.AddlMonthlyFees);
   useEffect(() => {
     if (window) {
-      window.addEventListener('scroll', () => {
+      window.addEventListener("scroll", () => {
         if (window.scrollY >= 870) {
-          setNavbar(true)
+          setNavbar(true);
         } else {
-          setNavbar(false)
+          setNavbar(false);
         }
-      })
+      });
     }
-  }, [])
+  }, []);
 
   return (
     <>
@@ -97,7 +97,7 @@ const PropertyPage = ({ main_data }) => {
                 <h1 className="vmain-title mb-0 mt-4 mt-md-2 text-2xl sm:text-4xl">
                   <div className="uppercase bannerSection">
                     <div className="listingStatus"></div>
-                    FOR {main_data.SaleLease} -{' '}
+                    FOR {main_data.SaleLease} -{" "}
                     {/* tailwind style classname for bottom dashed border gray*/}
                     <span className="border-gray-500 border-dotted border-b">
                       ACTIVE
@@ -105,14 +105,14 @@ const PropertyPage = ({ main_data }) => {
                   </div>
                   <div className="flex items-center justify-between mb-4">
                     <span className="me-2">
-                      {main_data.Street} {main_data.StreetName}{' '}
+                      {main_data.Street} {main_data.StreetName}{" "}
                       {main_data.StreetAbbreviation}
                     </span>
                     <CompareButton main_data={main_data} width={8} />
                   </div>
                 </h1>
                 <div className="flex flex-col items-center">
-                  <h3 className="main-title fs-4 pt-4 md:pt-8 fs-md-2 text-xl sm:text-3xl">
+                  <h3 className="main-title mw fs-4 pt-4 md:pt-8 fs-md-2 text-xl sm:text-3xl">
                     {price}
                   </h3>
                 </div>
@@ -206,7 +206,7 @@ const PropertyPage = ({ main_data }) => {
               </div>
               <div className="flex flex-row text-md md:text-md py-2 md:py-2">
                 <Image alt="" className="w-6 mr-2" src="/icons/tax4.svg" />
-                Tax Type: {main_data.TypeTaxes || 'N/A'}
+                Tax Type: {main_data.TypeTaxes || "N/A"}
               </div>
               <div className="flex flex-row text-md md:text-md py-2 md:py-2">
                 <Image alt="" className="w-6 mr-2" src="/icons/tax1.svg" />
@@ -230,7 +230,7 @@ const PropertyPage = ({ main_data }) => {
               className="w-8 am:w-10 inline mr-2"
               src="/walking.svg"
             />
-            Walk Score for {main_data.Street} {main_data.StreetName}{' '}
+            Walk Score for {main_data.Street} {main_data.StreetName}{" "}
             {main_data.StreetAbbreviation}
           </h2>
 
@@ -314,7 +314,7 @@ const PropertyPage = ({ main_data }) => {
       </div> */}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default PropertyPage
+export default PropertyPage;

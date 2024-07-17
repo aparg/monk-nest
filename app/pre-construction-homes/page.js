@@ -56,7 +56,7 @@ export default async function Home({ params }) {
         <div className="row row-cols-1 row-cols-md-1 align-items-center mx-0">
           <div className="col">
             <div className="py-md-4"></div>
-            <h1 className="main-title text-center fs-3 fw-bold fs-gta pt-5 my-4">
+            <h1 className="main-title mw text-center fs-3 fw-bold fs-gta pt-5 my-4">
               List of Pre Construction Projects in Canada
             </h1>
             {/* <h2 className="text-green mt-4 text-center">

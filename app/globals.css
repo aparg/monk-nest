@@ -16,6 +16,15 @@
     @apply text-black !important;
   }
 }
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+.playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.mw {
+  font-family: "Merriweather", serif;
+}
 
 a {
   color: black !important;
@@ -886,7 +895,7 @@ label {
   transform: translate(-50%, -50%);
 }
 
-.main-title {
+.main-title mw {
   display: inline-flex;
   font-weight: 800;
   line-height: 2rem;
@@ -2131,7 +2140,7 @@ button:focus:not(:focus-visible) {
     margin-bottom: 15px;
   }
 
-  /* .main-title {
+  /* .main-title mw {
     font-size: 2rem !important;
   } */
 

@@ -16,6 +16,8 @@ import Link from "next/link";
 import PropertySlider from "@/components/PropertySlider";
 import PreconPropertySlider from "@/components/PreconPropertySlider";
 import DolphyAdvantage from "@/components/DolphyAdvantage";
+import AssignmentCard from "@/components/AssignmentCard";
+import AssignmentPropertySlider from "@/components/AssignmentPropertySlider";
 
 const INITIAL_OFFSET = 0;
 const INITIAL_LIMIT = 20;
@@ -36,9 +38,20 @@ export default async function Home() {
     if (!res.ok) {
       notFound();
     }
+    const response = await res.json();
+    // console.log(response.data);
+    return response.results;
+  }
 
-    const resp = await res.json();
-    return resp.results;
+  async function getAssignmentData() {
+    const res = await fetch("https://api.homebaba.ca/assignment-all");
+
+    if (!res.ok) {
+      notFound();
+    }
+    const response = await res.json();
+    // console.log(response.data.results);
+    return response.data.results;
   }
   const torontoData = await getSalesData(INITIAL_OFFSET, INITIAL_LIMIT, CITY);
   const cambridgeData = await getSalesData(
@@ -73,6 +86,7 @@ export default async function Home() {
   ];
   const residentialData = await getFilteredRetsData({ saleLease: "Sale" });
   const preconData = await getData();
+  const assignmentData = await getAssignmentData();
   // console.log(preconData);
   return (
     <>
@@ -80,7 +94,7 @@ export default async function Home() {
         className="relative justify-center md:max-md:mt-10 items-center h-auto w-screen"
         id="hero"
       >
-        <div className="relative h-[400px] w-full">
+        <div className="relative h-[500px] w-full">
           <Image
             src="/hero-image.png"
             alt="Canadian home"
@@ -89,10 +103,10 @@ export default async function Home() {
             className="brightness-75"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 playfair md:leading-[4rem]">
+            <h1 className="text-4xl md:text-6xl font-bold text-center mb-4 playfair md:leading-[5rem] playfair">
               Find your perfect home <br /> in Canada
             </h1>
-            <div className="w-full max-w-2xl">
+            {/* <div className="w-full max-w-2xl">
               <div className="relative">
                 <input
                   type="text"
@@ -116,6 +130,9 @@ export default async function Home() {
                   </svg>
                 </button>
               </div>
+            </div> */}
+            <div className="pb-1 mt-4 ww d-flex justify-content-center">
+              <SearchBar />
             </div>
           </div>
         </div>
@@ -126,7 +143,7 @@ export default async function Home() {
       <div className="sm:mt-40 mt-24 container-fluid">
         <div className="flex flex-col md:flex-row justify-between items-center mb-3">
           <div>
-            <h3 className="main-title font-extrabold text-[2rem] md:text-4xl text-black text-center md:text-start">
+            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-center md:text-start">
               Featured Resale Properties
             </h3>
             <h4 className="mt-1">Explore our resale properties in Canada</h4>
@@ -143,7 +160,7 @@ export default async function Home() {
       <div className="sm:mt-40 mt-24 container-fluid">
         <div className="flex flex-col md:flex-row justify-between items-center mb-3">
           <div>
-            <h3 className="main-title font-extrabold text-[2rem] md:text-4xl text-black text-center md:text-start">
+            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-center md:text-start">
               Featured Projects
             </h3>
             <h4 className="mt-1">Explore our pre construction projects </h4>
@@ -157,6 +174,47 @@ export default async function Home() {
         </div>
         <PreconPropertySlider data={preconData} numberOfCards={10} />
       </div>
+      <div className="sm:mt-40 mt-24 container-fluid">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-3">
+          <div>
+            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-center md:text-start">
+              Assignment Projects
+            </h3>
+            <h4 className="mt-1">Explore our assignment projects </h4>
+          </div>
+          <Link
+            href="/pre-construction-homes"
+            className="bg-primary-color text-black px-5 py-3 hover:no-underline flex items-center underline hover:underline"
+          >
+            View More
+          </Link>
+        </div>
+        <AssignmentPropertySlider
+          data={assignmentData?.slice(0, 5)}
+          numberOfCards={5}
+        />
+      </div>
+      <div className="py-3 py-md-5 mt-10 md:mt-24">
+        <div className="my-5 py-5">
+          <div className="position-relative bg-lightblue container-fluid2">
+            <div className="side-img">
+              <img
+                src="/label.png"
+                alt="condo in calgary"
+                className="img-fluid"
+              />
+            </div>
+            <div className="side-text">
+              <p>
+                Homepapa has one of the largest, most updated database of new
+                construction homes, backed by industry-leading technology and
+                partners.
+              </p>
+              <img src="/logo.png" className="w-20"></img>
+            </div>
+          </div>
+        </div>
+      </div>
       <DolphyAdvantage />
       {/* <div className="sm:mt-40 mt-24 container-fluid"></div> */}
       {/* <div className="mt-4 sm:mt-24">
@@ -166,8 +224,7 @@ export default async function Home() {
             <RealEstateNews />
           </div> */}
 
-      <div className="">
-        <div className="py-md-5"></div>
+      <div className="mt-10 sm:mt-24">
         <div className="py-5 my-5" id="mycontact">
           <div className="container-fluid">
             <div className="row justify-content-center">
@@ -180,6 +237,7 @@ export default async function Home() {
             <h2 className=" text-center px-md-4 fs-4 text-md mb-10 font-bold">
               Contact Monk Nest now!
             </h2>
+
             <div className="row row-cols-1 row-cols-md-3 mt-5">
               <div className="col-md-3"></div>
               <div className="col-md-6">

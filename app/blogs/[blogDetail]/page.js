@@ -78,7 +78,9 @@ const BlogDetails = async ({ params }) => {
             </div>
 
             <div className="blog-title">
-              <h1 className="main-title py-3 mb-3 fs-1">{blog.news_title}</h1>
+              <h1 className="main-title mw py-3 mb-3 fs-1">
+                {blog.news_title}
+              </h1>
             </div>
             <section className="blog__author d-flex align-items-center mt-3">
               <div className="blog__author-image">
@@ -92,7 +94,7 @@ const BlogDetails = async ({ params }) => {
               </div>
               <div className="row flex-grow-1 ps-3">
                 <div className="blog__author-detail col-sm-12 col-md-9 ">
-                  <div className="fw-bold">The Dolphy Content Team</div>
+                  <div className="fw-bold">The Monk Nest Content Team</div>
                   <div className="text-secondary">
                     Posted {dayjs(blog?.date_of_upload).format("MMMM DD, YYYY")}
                   </div>
@@ -135,7 +137,7 @@ const BlogDetails = async ({ params }) => {
             {filteredBlogPostsBasedOnCity.length > 0 ? (
               <>
                 <section className="blogs__related mt-5">
-                  <h3 className="main-title">You might be interested in</h3>
+                  <h3 className="main-title mw">You might be interested in</h3>
                   <article>
                     <div className="row mt-4">
                       {filteredBlogPostsBasedOnCity.map((blog, index) => {
@@ -167,7 +169,7 @@ const BlogDetails = async ({ params }) => {
             />
           </div>
           <h2 className="fw-mine text-center px-md-4 fs-4">
-            Contact Dolphy Team Today
+            Contact Monk Nest Team Today
           </h2>
           <div className="row row-cols-1 row-cols-md-3 mt-3">
             <div className="col-md-3"></div>

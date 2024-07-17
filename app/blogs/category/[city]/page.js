@@ -15,7 +15,7 @@ export async function generateMetadata({ params }, parent) {
     alternates: {
       canonical: `https://dolphy.ca/blogs/category/${params?.city}`,
     },
-    title: `Dolphy Blogs | ${params?.city} Insights on real Estate`,
+    title: `Monk Nest Blogs | ${params?.city} Insights on real Estate`,
   };
 }
 
@@ -57,8 +57,8 @@ const CityBlogs = async ({ params }) => {
             <div className="blogs">
               <div className="row g-4">
                 <div className="col-sm-12 col-lg-12">
-                  <h1 className="main-title text-center text-md-start mb-4">
-                    The Dolphy Blog : Learn whats happening in your city
+                  <h1 className="main-title mw text-center text-md-start mb-4">
+                    The Monk Nest Blog : Learn whats happening in your city
                   </h1>
                   <div className="insights-on-cities">
                     <CityInsights
@@ -105,7 +105,7 @@ const CityBlogs = async ({ params }) => {
               />
             </div>
             <h2 className="fw-mine text-center px-md-4 fs-4">
-              Contact Dolphy Team Today
+              Contact Monk Nest Team Today
             </h2>
             <div className="row row-cols-1 row-cols-md-3 mt-3">
               <div className="col-md-3"></div>

@@ -159,7 +159,7 @@ const page = () => {
   // };
   return (
     <div className="container-fluid w-full">
-      <h3 className="main-title fs-2">Your Comparisions</h3>
+      <h3 className="main-title mw fs-2">Your Comparisions</h3>
       <div className="w-full overflow-x-scroll">
         <table className="table-auto w-full">
           <thead>

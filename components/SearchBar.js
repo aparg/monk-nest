@@ -3,93 +3,93 @@
 import { useState } from "react";
 import Link from "next/link";
 import Autosuggest from "react-autosuggest";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 
 const SearchBar = () => {
-  const [value, setValue] = useState('')
-  const [suggestions, setSuggestions] = useState([])
+  const [value, setValue] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
 
-  const router = useRouter()
+  const router = useRouter();
 
   const citiesWithProvinces = [
-    { city: 'Barrie', province: 'Ontario' },
-    { city: 'Belleville', province: 'Ontario' },
-    { city: 'Brampton', province: 'Ontario' },
-    { city: 'Brant', province: 'Ontario' },
-    { city: 'Brantford', province: 'Ontario' },
-    { city: 'Brockville', province: 'Ontario' },
-    { city: 'Burlington', province: 'Ontario' },
-    { city: 'Cambridge', province: 'Ontario' },
-    { city: 'Clarence-Rockland', province: 'Ontario' },
-    { city: 'Cornwall', province: 'Ontario' },
-    { city: 'Dryden', province: 'Ontario' },
-    { city: 'Elliot Lake', province: 'Ontario' },
-    { city: 'Greater Sudbury', province: 'Ontario' },
-    { city: 'Guelph', province: 'Ontario' },
-    { city: 'Haldimand County', province: 'Ontario' },
-    { city: 'Hamilton', province: 'Ontario' },
-    { city: 'Kawartha Lakes', province: 'Ontario' },
-    { city: 'Kenora', province: 'Ontario' },
-    { city: 'Kingston', province: 'Ontario' },
-    { city: 'Kitchener', province: 'Ontario' },
-    { city: 'London', province: 'Ontario' },
-    { city: 'Markham', province: 'Ontario' },
-    { city: 'Mississauga', province: 'Ontario' },
-    { city: 'Niagara Falls', province: 'Ontario' },
-    { city: 'Norfolk County', province: 'Ontario' },
-    { city: 'North Bay', province: 'Ontario' },
-    { city: 'Orillia', province: 'Ontario' },
-    { city: 'Oshawa', province: 'Ontario' },
-    { city: 'Ottawa', province: 'Ontario' },
-    { city: 'Owen Sound', province: 'Ontario' },
-    { city: 'Pembroke', province: 'Ontario' },
-    { city: 'Peterborough', province: 'Ontario' },
-    { city: 'Pickering', province: 'Ontario' },
-    { city: 'Port Colborne', province: 'Ontario' },
-    { city: 'Prince Edward County', province: 'Ontario' },
-    { city: 'Quinte West', province: 'Ontario' },
-    { city: 'Richmond Hill', province: 'Ontario' },
-    { city: 'Sarnia', province: 'Ontario' },
-    { city: 'Sault Ste Marie', province: 'Ontario' },
-    { city: 'St Catharines', province: 'Ontario' },
-    { city: 'St Thomas', province: 'Ontario' },
-    { city: 'Stratford', province: 'Ontario' },
-    { city: 'Temiskaming Shores', province: 'Ontario' },
-    { city: 'Thorold', province: 'Ontario' },
-    { city: 'Thunder Bay', province: 'Ontario' },
-    { city: 'Timmins', province: 'Ontario' },
-    { city: 'Toronto', province: 'Ontario' },
-    { city: 'Vaughan', province: 'Ontario' },
-    { city: 'Waterloo', province: 'Ontario' },
-    { city: 'Welland', province: 'Ontario' },
-    { city: 'Windsor', province: 'Ontario' },
-    { city: 'Woodstock', province: 'Ontario' },
+    { city: "Barrie", province: "Ontario" },
+    { city: "Belleville", province: "Ontario" },
+    { city: "Brampton", province: "Ontario" },
+    { city: "Brant", province: "Ontario" },
+    { city: "Brantford", province: "Ontario" },
+    { city: "Brockville", province: "Ontario" },
+    { city: "Burlington", province: "Ontario" },
+    { city: "Cambridge", province: "Ontario" },
+    { city: "Clarence-Rockland", province: "Ontario" },
+    { city: "Cornwall", province: "Ontario" },
+    { city: "Dryden", province: "Ontario" },
+    { city: "Elliot Lake", province: "Ontario" },
+    { city: "Greater Sudbury", province: "Ontario" },
+    { city: "Guelph", province: "Ontario" },
+    { city: "Haldimand County", province: "Ontario" },
+    { city: "Hamilton", province: "Ontario" },
+    { city: "Kawartha Lakes", province: "Ontario" },
+    { city: "Kenora", province: "Ontario" },
+    { city: "Kingston", province: "Ontario" },
+    { city: "Kitchener", province: "Ontario" },
+    { city: "London", province: "Ontario" },
+    { city: "Markham", province: "Ontario" },
+    { city: "Mississauga", province: "Ontario" },
+    { city: "Niagara Falls", province: "Ontario" },
+    { city: "Norfolk County", province: "Ontario" },
+    { city: "North Bay", province: "Ontario" },
+    { city: "Orillia", province: "Ontario" },
+    { city: "Oshawa", province: "Ontario" },
+    { city: "Ottawa", province: "Ontario" },
+    { city: "Owen Sound", province: "Ontario" },
+    { city: "Pembroke", province: "Ontario" },
+    { city: "Peterborough", province: "Ontario" },
+    { city: "Pickering", province: "Ontario" },
+    { city: "Port Colborne", province: "Ontario" },
+    { city: "Prince Edward County", province: "Ontario" },
+    { city: "Quinte West", province: "Ontario" },
+    { city: "Richmond Hill", province: "Ontario" },
+    { city: "Sarnia", province: "Ontario" },
+    { city: "Sault Ste Marie", province: "Ontario" },
+    { city: "St Catharines", province: "Ontario" },
+    { city: "St Thomas", province: "Ontario" },
+    { city: "Stratford", province: "Ontario" },
+    { city: "Temiskaming Shores", province: "Ontario" },
+    { city: "Thorold", province: "Ontario" },
+    { city: "Thunder Bay", province: "Ontario" },
+    { city: "Timmins", province: "Ontario" },
+    { city: "Toronto", province: "Ontario" },
+    { city: "Vaughan", province: "Ontario" },
+    { city: "Waterloo", province: "Ontario" },
+    { city: "Welland", province: "Ontario" },
+    { city: "Windsor", province: "Ontario" },
+    { city: "Woodstock", province: "Ontario" },
     // Add more cities here
-    { city: 'Ajax', province: 'Ontario' },
-    { city: 'Whitby', province: 'Ontario' },
-    { city: 'Courtice', province: 'Ontario' },
-    { city: 'Bowmanville', province: 'Ontario' },
-    { city: 'Innisfil', province: 'Ontario' },
-    { city: 'Bradford', province: 'Ontario' },
-  ]
+    { city: "Ajax", province: "Ontario" },
+    { city: "Whitby", province: "Ontario" },
+    { city: "Courtice", province: "Ontario" },
+    { city: "Bowmanville", province: "Ontario" },
+    { city: "Innisfil", province: "Ontario" },
+    { city: "Bradford", province: "Ontario" },
+  ];
 
   // Function to get suggestions based on user input
   const getSuggestions = (inputValue) => {
-    const inputValueLowerCase = inputValue.trim().toLowerCase()
+    const inputValueLowerCase = inputValue.trim().toLowerCase();
     return citiesWithProvinces.filter((data) =>
       data.city.toLowerCase().includes(inputValueLowerCase)
-    )
-  }
+    );
+  };
 
   // Triggered when the input value changes
   const onSuggestionsFetchRequested = ({ value }) => {
-    setSuggestions(getSuggestions(value))
-  }
+    setSuggestions(getSuggestions(value));
+  };
 
   // Triggered when the input value is cleared
   const onSuggestionsClearRequested = () => {
-    setSuggestions([])
-  }
+    setSuggestions([]);
+  };
 
   // Render Each Option
   const renderSuggestion = (suggestion) => (
@@ -121,31 +121,31 @@ const SearchBar = () => {
         </div>
       </Link>
     </div>
-  )
+  );
 
   // Autosuggest input props
   const inputProps = {
-    placeholder: 'Search for city',
+    placeholder: "Search for city",
     value,
     onChange: (event, { newValue }) => setValue(newValue),
     onKeyDown: (event) => {
       // Check if the pressed key is Enter (key code 13)
-      if (event.key === 'Enter') {
+      if (event.key === "Enter") {
         // Get the first suggestion (if available)
-        const firstSuggestion = suggestions[0]
+        const firstSuggestion = suggestions[0];
 
         // If there is a suggestion, navigate to its link
         if (firstSuggestion) {
           router.push(
             `/${firstSuggestion.province.toLowerCase()}/${firstSuggestion.city.toLowerCase()}`
-          )
+          );
         }
       }
     },
     //additional
-    highlightFirstSuggestion: true,
-    alwaysRenderSuggestions: true,
-  }
+    highlightfirstsuggestion: true,
+    alwaysrendersuggestions: true,
+  };
 
   return (
     <Autosuggest
@@ -156,7 +156,7 @@ const SearchBar = () => {
       renderSuggestion={renderSuggestion}
       inputProps={inputProps}
     />
-  )
-}
+  );
+};
 
 export default SearchBar;

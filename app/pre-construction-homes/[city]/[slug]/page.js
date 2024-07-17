@@ -182,7 +182,7 @@ export default async function Home({ params }) {
                 <div className="screenshot">
                   <div className="row row-cols-1 row-cols-sm-2">
                     <div className="col-sm-12">
-                      <h1 className="main-title text-red fw-mine">
+                      <h1 className="main-title mw text-red fw-mine">
                         {data.project_name}
                       </h1>
                       <p className="mb-0">
@@ -371,7 +371,7 @@ export default async function Home({ params }) {
           <div className="container-fluid px-md-4 pt-md-5 mt-4">
             <section>
               <div className="d-flex flex-column justify-content-center align-items-center pb-md-4">
-                <h3 className="main-title mb-3 mt-2 mb-md-5 text-center d-flex flex-column d-md-block">
+                <h3 className="main-title mw mb-3 mt-2 mb-md-5 text-center d-flex flex-column d-md-block">
                   Frequently Asked Questions About{" "}
                   <u className="ms-2">{data.project_name}</u>
                 </h3>
@@ -387,7 +387,7 @@ export default async function Home({ params }) {
           <div className="py-5 my-5"></div>
           <div>
             <div className="d-flex flex-column">
-              <h2 className="main-title">
+              <h2 className="main-title mw">
                 Similar New Construction Homes in {data.city.name} ( 2023 )
               </h2>
             </div>

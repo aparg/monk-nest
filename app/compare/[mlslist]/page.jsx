@@ -107,7 +107,7 @@ const page = () => {
   });
   return (
     <div className="container-fluid">
-      <h3 className="main-title fs-2">Your Comparisions</h3>
+      <h3 className="main-title mw fs-2">Your Comparisions</h3>
       <table className="table-auto w-full">
         <thead>
           <th className="p-2 border-b"></th>
