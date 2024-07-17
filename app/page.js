@@ -206,7 +206,7 @@ export default async function Home() {
             </div>
             <div className="side-text">
               <p>
-                Homepapa has one of the largest, most updated database of new
+                Monkey Nest has one of the largest, most updated database of new
                 construction homes, backed by industry-leading technology and
                 partners.
               </p>
