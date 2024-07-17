@@ -94,7 +94,7 @@ export default async function Home() {
         className="relative justify-center md:max-md:mt-10 items-center h-auto w-screen"
         id="hero"
       >
-        <div className="relative h-[250px] w-full">
+        <div className="relative h-[450px] w-full">
           <Image
             src="/hero-image.png"
             alt="Canadian home"
