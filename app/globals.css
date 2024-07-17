@@ -1736,6 +1736,7 @@ label {
   border: none;
   border-radius: 0 !important;
   border-radius: 99px !important;
+  color: black;
 }
 
 .react-autosuggest__input--focused {

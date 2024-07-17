@@ -126,7 +126,7 @@ const SearchBar = () => {
 
   // Autosuggest input props
   const inputProps = {
-    color: "black",
+    color: black,
     placeholder: "Search for city",
     value,
     onChange: (event, { newValue }) => setValue(newValue),
