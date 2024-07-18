@@ -61,12 +61,12 @@ const cardsData = [
 ];
 const PopularCities = () => {
   return (
-    <div className="">
+    <div className="flex flex-col items-center sm:items-start">
       <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-center md:text-start">
         Featured Areas
       </h3>
-      <h4 className="mt-1">Explore our 9 featured areas in Canada</h4>
-      <div className="grid grid-cols-3 gap-4 items-center w-full justify-center md:justify-start items-center flex-wrap lg:mt-2">
+      <h4 className="mt-1 mb-3">Explore our 9 featured areas in Canada</h4>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center w-full justify-center md:justify-start items-center flex-wrap lg:mt-2">
         {cardsData.map((card) => (
           <ImageText {...card} key={card.id} />
         ))}

@@ -325,7 +325,7 @@ export default async function Home({ params }) {
                             <i className="bi bi-telephone"></i> (587) 887-2572
                           </Link>
                         </p>
-                        <p className="mb-0 text-center">hello@dolphy.ca</p>
+                        <p className="mb-0 text-center">hello@monknest.ca</p>
                       </div>
                     </div>
                     <div className="my-4"></div>

@@ -17,7 +17,8 @@
   }
 }
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
 .playfair {
   font-family: "Playfair Display", serif;
 }
@@ -895,10 +896,11 @@ label {
   transform: translate(-50%, -50%);
 }
 
-.main-title mw {
+.main-title {
   display: inline-flex;
   font-weight: 800;
   line-height: 2rem;
+  font-family: "Merriweather", serif;
 }
 
 .text-mine {
@@ -1247,7 +1249,7 @@ label {
 }
 
 .btn-call {
-  background-color: #00a1ff !important;
+  /* background-color: #00a1ff !important; */
   color: #ffffff /*ff6200*/ !important;
   transition: background-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
@@ -1451,6 +1453,18 @@ label {
   left: 20%;
   top: -20%;
   position: absolute;
+}
+
+@media screen and (max-width: 800px) {
+  .side-img {
+    position: static !important;
+  }
+  .side-text {
+    position: static !important;
+  }
+  .bg-lightblue {
+    height: auto;
+  }
 }
 
 .side-img img {
@@ -2125,7 +2139,7 @@ button:focus:not(:focus-visible) {
 }
 @media screen and (max-width: 800px) {
   .ww .react-autosuggest__input {
-    width: 100% !important;
+    width: 280px !important;
   }
   .ww {
     display: block !important;
@@ -2366,4 +2380,93 @@ div.dynamic {
   object-fit: cover;
   object-position: center;
   border-radius: 7px;
+}
+
+/* Assignments */
+.aff2 {
+  position: relative;
+  z-index: 0;
+}
+
+.aff2::before {
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 20px;
+  background-color: rgb(255 141 31 / 28%);
+  position: absolute;
+  bottom: 10px;
+  border-radius: 50%;
+  left: 1px;
+}
+
+.leaf-img {
+  width: 22px;
+}
+
+.leaf-img2 {
+  width: 40px;
+}
+
+.roundddd {
+  border-radius: 10px !important;
+  padding: 1rem !important;
+  background-image: url(https://assets.healthline.com/content/images/wave-background-desktop.svg);
+  background-color: #fbf5ed;
+  clear: both;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+.main-titleee {
+  font-weight: 800;
+  color: #000000;
+  font-size: 3.2rem;
+  line-height: 3rem;
+  color: red;
+}
+
+.homet {
+  display: inline-block;
+  font-size: 1.7rem !important;
+  font-weight: 700;
+}
+
+.homet2 {
+  display: inline-block;
+  font-size: 2.8rem !important;
+  font-weight: 800;
+}
+
+.small-i {
+  height: 13px;
+}
+
+.image3 {
+  width: 90%;
+  height: 150px;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 50% !important;
+}
+
+.foot-up-img {
+  opacity: 0.25;
+  margin-bottom: -5px;
+  overflow: hidden;
+}
+
+.small-text2 {
+  font-size: 10px;
+  line-height: 1.5;
+  color: rgb(0, 0, 0);
+}
+
+.fixxcont {
+  display: none;
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
 }

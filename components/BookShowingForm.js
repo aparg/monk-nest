@@ -147,7 +147,7 @@ export default function BookShowingForm(props) {
               <div className="mb-2">
                 <p className="showing-info leading-snug">
                   We'll call you within the next business hour to match you with
-                  an agent from the Houseful™ agent network. By submitting this
+                  an agent from the Monk Nest™ agent network. By submitting this
                   information, I acknowledge I have read and agree to the{" "}
                   <a href="#">Terms of use,</a> including its Privacy section.
                 </p>
@@ -169,9 +169,9 @@ export default function BookShowingForm(props) {
               ></Checkbox> */}
               <p className="showing-info showing-info__cb leading-tight text-center">
                 I would like to receive marketing and promotional messages by
-                telephone, text message, and email from Houseful, including
+                telephone, text message, and email from Monk Nest, including
                 information and updates about properties of interest and the
-                services and features of Houseful and our selected partners. I
+                services and features of Monk Nest and our selected partners. I
                 may withdraw my consent at any time. Message and data rates may
                 apply. Consent is not required to receive real estate services.
               </p>

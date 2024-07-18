@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
             <div className="h-7"></div>
           </div>
-          <div className="flex flex-row col-12 col-md-2 mt-8 sm:mt-1 order-3 sm:order-4">
+          <div className="flex flex-row col-12 col-md-2 mt-8 sm:mt-1 order-3 sm:order-4 items-center">
             <Link target="_blank" href="#">
               <img
                 className="w-3 mx-3"
@@ -69,8 +69,8 @@ const Footer = () => {
             </Link>
           </div>
           <div className="order-6">
-            <h1 className="text-xl font-bold mt-8">MLS Disclaimer</h1>
-            <p>
+            <h1 className="text-xl font-bold mt-8 ">MLS Disclaimer</h1>
+            <p className="text-[#222222]">
               Toronto Real Estate Board (TRREB); All information deemed reliable
               but not guaranteed. All properties are subject to prior sale,
               change or withdrawal. Neither listing broker(s) or information
@@ -106,7 +106,7 @@ const Footer = () => {
               Copyright ©2024 All rights reserved.
             </p>
           </div>
-          <div className="my-1 text-primary-color text-center order-7">
+          <div className="my-1 text-primary-color sm:text-center text-start order-7 mt-6">
             Website designed by{" "}
             <Link href="sixdesign.ca" target="_blank">
               <strong className="text-primary-color">SixDesign</strong>

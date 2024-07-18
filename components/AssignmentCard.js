@@ -44,7 +44,12 @@ const AssignmentCard = React.forwardRef(({ curElem, small = false }, ref) => {
 
   return (
     <section className="" ref={ref}>
-      <Link href={curElem.slug} className="text-black">
+      <Link
+        href={`/assignment-sale/${curElem.city.name?.toLowerCase()}/${
+          curElem.slug
+        }`}
+        className="text-black"
+      >
         <div className="lg:px-0 h-full w-full">
           <div className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl p-0 hover:shadow-lg hover:-translate-y-1 relative">
             <div

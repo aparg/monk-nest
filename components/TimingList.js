@@ -26,6 +26,7 @@ const TimingList = ({ handleChange }) => {
           setSelected={setSelected}
           handleChange={handleChange}
           timing={timing}
+          key={timing.time}
         />
       ))}
     </div>

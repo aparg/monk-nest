@@ -36,7 +36,7 @@ const PropertySlider = ({ numberOfCards = 4, data }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative flex justify-center">
       <div className="btns flex justify-between">
         <button
           className="scroll-left absolute start-0"
@@ -62,7 +62,7 @@ const PropertySlider = ({ numberOfCards = 4, data }) => {
           if (curElem.MLS !== "C8446018" && curElem.MLS !== "C8450446") {
             //manual removal, to be removed later
             return (
-              <div className="px-2 pb-3" key={index} ref={cardRef}>
+              <div className="px-2 pb-3 my-2 sm:my-0" key={index} ref={cardRef}>
                 <PropertyCard curElem={curElem} key={index}></PropertyCard>
               </div>
             );

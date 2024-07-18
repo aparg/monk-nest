@@ -28,7 +28,7 @@ const AssignmentPropertySlider = ({ numberOfCards = 5, data }) => {
   };
 
   return (
-    <div className="relative mb-8  flex flex-row">
+    <div className="relative mb-8 flex justify-center">
       <div className="btns flex justify-between">
         <button
           className="scroll-left absolute start-0"
@@ -53,10 +53,10 @@ const AssignmentPropertySlider = ({ numberOfCards = 5, data }) => {
         {data?.map((curElem, index) => {
           // console.log(value);
           return (
-            <div className="px-2" ref={cardRef}>
+            <div className="px-2 my-2 sm:my-0" ref={cardRef}>
               <AssignmentCard
                 curElem={curElem}
-                key={curElem.project_address}
+                key={index}
                 // link={`/${value.name.replace(" ", "-")}`}
               ></AssignmentCard>
             </div>
