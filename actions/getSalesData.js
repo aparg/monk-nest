@@ -13,7 +13,7 @@ export const getSalesData = async (offset, limit, city, listingType) => {
     );
     const options = {
       method: "GET",
-      cache: "no-store",
+      // cache: "no-store",
     };
 
     if (listingType) {
@@ -84,7 +84,7 @@ export const getFilteredRetsData = async (queryParams) => {
     // console.log(url);
     const options = {
       method: "GET",
-      cache: "no-store",
+      // cache: "no-store",
     };
     const res = await fetch(url, options);
     const data = await res.json();
