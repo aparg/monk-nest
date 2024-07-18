@@ -44,7 +44,9 @@ export default async function Home() {
   }
 
   async function getAssignmentData() {
-    const res = await fetch("https://api.homebaba.ca/assignment-all");
+    const res = await fetch("https://api.homebaba.ca/assignment-all", {
+      next: { revalidate: 10 },
+    });
 
     if (!res.ok) {
       notFound();
@@ -104,7 +106,7 @@ export default async function Home() {
             className="absolute brightness-75 w-full h-full"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4 md:top-[15%] top-[10%]">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 playfair md:leading-[3rem] playfair ">
+            <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 playfair md:leading-[4rem] playfair ">
               Find your perfect home <br /> in Canada
             </h1>
             <div className="pb-1 mt-4 ww d-flex justify-content-center">
