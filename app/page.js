@@ -194,7 +194,7 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <DolphyAdvantage />
+      {/* <DolphyAdvantage /> */}
       {/* <div className="sm:mt-40 mt-24 container-fluid"></div> */}
       {/* <div className="mt-4 sm:mt-24">
             <SuggestedCity defaultCitiesData={defaultCitiesData} />
