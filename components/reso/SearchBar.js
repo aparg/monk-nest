@@ -142,9 +142,6 @@ const SearchBar = () => {
         }
       }
     },
-    //additional
-    highlightFirstSuggestion: true,
-    alwaysRenderSuggestions: true,
   };
 
   return (
@@ -155,6 +152,8 @@ const SearchBar = () => {
       getSuggestionValue={(suggestion) => suggestion?.city}
       renderSuggestion={renderSuggestion}
       inputProps={inputProps}
+      highlightFirstSuggestion={true}
+      alwaysRenderSuggestions={true}
     />
   );
 };

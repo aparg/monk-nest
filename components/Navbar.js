@@ -172,7 +172,7 @@ const Navbar = (props) => {
               className={`text-base font-normal transition-all duration-200 ${
                 isHomePage &&
                 !isSticky &&
-                "lg:text-black hover:text-green-200 active:text-primary-green focus:text-primary-green"
+                "lg:text-black hover:text-primary-green active:text-primary-green focus:text-primary-green"
               } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
                ${!isHomePage && "text-black"}`}
             >
@@ -184,7 +184,7 @@ const Navbar = (props) => {
               className={`text-base font-normal transition-all duration-200 ${
                 isHomePage &&
                 !isSticky &&
-                "lg:text-black hover:text-green-200 active:text-primary-green focus:text-primary-green"
+                "lg:text-black hover:text-primary-green active:text-primary-green focus:text-primary-green"
               } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
                ${!isHomePage && "text-black"}`}
             >
@@ -196,7 +196,7 @@ const Navbar = (props) => {
               className={`text-base font-normal transition-all duration-200 ${
                 isHomePage &&
                 !isSticky &&
-                "lg:text-black hover:text-green-200 active:text-primary-green focus:text-primary-green"
+                "lg:text-black hover:text-primary-green active:text-primary-green focus:text-primary-green"
               } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
                ${!isHomePage && "text-black"}`}
             >
@@ -208,7 +208,7 @@ const Navbar = (props) => {
               className={`text-base font-normal transition-all duration-200 ${
                 isHomePage &&
                 !isSticky &&
-                "lg:text-black hover:text-green-200 active:text-primary-green focus:text-primary-green"
+                "lg:text-black hover:text-primary-green active:text-primary-green focus:text-primary-green"
               } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
                ${!isHomePage && "text-black"}`}
             >
@@ -254,7 +254,7 @@ const Navbar = (props) => {
                 className={`text-base font-normal transition-all duration-200 py-2 ${
                   isHomePage &&
                   !isSticky &&
-                  "lg:text-black hover:text-green-200 active:text-primary-green focus:text-primary-green"
+                  "lg:text-black hover:text-primary-green active:text-primary-green focus:text-primary-green"
                 } ${
                   (isSticky || !isHomePage) &&
                   "text-black hover:text-primary-green"
@@ -270,7 +270,7 @@ const Navbar = (props) => {
                 className={`text-base font-normal transition-all duration-200 py-2 ${
                   isHomePage &&
                   !isSticky &&
-                  "lg:text-black hover:text-green-200 active:text-primary-green focus:text-primary-green"
+                  "lg:text-black hover:text-primary-green active:text-primary-green focus:text-primary-green"
                 } ${
                   (isSticky || !isHomePage) &&
                   "text-black hover:text-primary-green"

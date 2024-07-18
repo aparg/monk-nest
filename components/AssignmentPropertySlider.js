@@ -56,6 +56,7 @@ const AssignmentPropertySlider = ({ numberOfCards = 5, data }) => {
             <div className="px-2" ref={cardRef}>
               <AssignmentCard
                 curElem={curElem}
+                key={curElem.project_address}
                 // link={`/${value.name.replace(" ", "-")}`}
               ></AssignmentCard>
             </div>

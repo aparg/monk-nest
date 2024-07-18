@@ -99,7 +99,7 @@ export default async function Home() {
             src="/hero-image.png"
             alt="Canadian home"
             layout="fill"
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
             className="brightness-75"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4">

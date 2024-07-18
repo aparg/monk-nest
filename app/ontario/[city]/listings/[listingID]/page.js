@@ -15,7 +15,6 @@ import AdditionalListing from "@/components/reso/AdditionalListing";
 import PropertyPage from "@/components/reso/propertyPage";
 import { generateURL } from "@/helpers/generateURL";
 import BookingDate from "@/components/BookingDate";
-import { usePathname } from "next/navigation";
 import FAQ from "@/components/FAQ";
 import MortgageCalculator from "@/components/MortgageCalculator";
 import { Image } from "react-bootstrap";
