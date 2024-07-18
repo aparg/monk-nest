@@ -18,6 +18,7 @@ import PreconPropertySlider from "@/components/PreconPropertySlider";
 import DolphyAdvantage from "@/components/DolphyAdvantage";
 import AssignmentCard from "@/components/AssignmentCard";
 import AssignmentPropertySlider from "@/components/AssignmentPropertySlider";
+import PhotosSection from "@/components/PhotosSection";
 
 const INITIAL_OFFSET = 0;
 const INITIAL_LIMIT = 20;
@@ -201,7 +202,9 @@ export default async function Home() {
       {/* <div className="container-fluid mt-10 sm:mt-24">
             <RealEstateNews />
           </div> */}
-
+      <div className="mt-10 sm:mt-24">
+        <PhotosSection />
+      </div>
       <div className="mt-10 sm:mt-24">
         <div className="py-5 my-5" id="mycontact">
           <div className="container-fluid">

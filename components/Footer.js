@@ -31,9 +31,12 @@ const Footer = () => {
           <div className="col-12 col-md-4 flex flex-col items-start order-2 pl-3">
             <div className="flex flex-col sm:mt-0 mt-5">
               <span className="my-1 text-primary-color">
-                328 Hwy 7 E, Unit 20 Richmmond Hill, ON L4B 3P7
+                8300 Woodbine Ave Unit 100 Markham, Ontario, ON L3R9Y7
               </span>
-              <span className="my-1 text-primary-color">admin@monknest.ca</span>
+              <span>
+                <img src="/phone.svg" className="inline mr-2"></img>647-362-1757
+              </span>
+              <span className="my-1 text-primary-color">parag@monknest.ca</span>
               <span className="my-1 text-primary-color">905.882.6882</span>
             </div>
           </div>
