@@ -91,46 +91,22 @@ export default async function Home() {
   return (
     <>
       <div
-        className="relative justify-center md:max-md:mt-10 items-center h-auto w-screen"
+        className="relative justify-center md:max-md:mt-10 items-center h-[50vh] md:h-[500px] w-full"
         id="hero"
       >
-        <div className="relative h-[350px] w-full">
+        <div className="sm:relative h-full w-full overflow-hidden">
           <Image
             src="/hero-image.png"
             alt="Canadian home"
             layout="fill"
+            objectFit="cover"
             style={{ objectFit: "cover" }}
-            className="brightness-75"
+            className="absolute brightness-75 w-full h-full"
           />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 playfair md:leading-[3rem] playfair">
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4 md:top-[15%] top-[10%]">
+            <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 playfair md:leading-[3rem] playfair ">
               Find your perfect home <br /> in Canada
             </h1>
-            {/* <div className="w-full max-w-2xl">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search by city, address, MLS #"
-                  className="w-full py-3 px-4 pr-10 rounded-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <button className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-gray-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div> */}
             <div className="pb-1 mt-4 ww d-flex justify-content-center">
               <SearchBar />
             </div>
@@ -142,8 +118,8 @@ export default async function Home() {
       </div>
       <div className="sm:mt-40 mt-24 container-fluid">
         <div className="flex flex-col md:flex-row justify-between items-center mb-3">
-          <div>
-            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-center md:text-start">
+          <div className="text-center md:text-start">
+            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black ">
               Featured Resale Properties
             </h3>
             <h4 className="mt-1">Explore our resale properties in Canada</h4>
@@ -176,8 +152,8 @@ export default async function Home() {
       </div>
       <div className="sm:mt-40 mt-24 container-fluid">
         <div className="flex flex-col md:flex-row justify-between items-center mb-3">
-          <div>
-            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-center md:text-start">
+          <div className="text-center md:text-start">
+            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black ">
               Assignment Projects
             </h3>
             <h4 className="mt-1">Explore our assignment projects </h4>
@@ -196,7 +172,7 @@ export default async function Home() {
       </div>
       <div className="py-3 py-md-5 mt-10 md:mt-24">
         <div className="my-5 py-5">
-          <div className="position-relative bg-lightblue container-fluid">
+          <div className="position-relative bg-lightblue container-fluid flex md:flex-row flex-col">
             <div className="side-img">
               <img
                 src="/label.png"
@@ -204,13 +180,13 @@ export default async function Home() {
                 className="img-fluid"
               />
             </div>
-            <div className="side-text">
+            <div className="side-text flex flex-col items-center sm:items-end">
               <p>
-                Monkey Nest has one of the largest, most updated database of new
+                Monk Nest has one of the largest, most updated database of new
                 construction homes, backed by industry-leading technology and
                 partners.
               </p>
-              <img src="/logo.png" className="w-20"></img>
+              <img src="/logo.png" className="w-20 mt-2 mb-4 sm:my-0 "></img>
             </div>
           </div>
         </div>
