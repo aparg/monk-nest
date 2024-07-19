@@ -26,6 +26,7 @@ const AssignmentPropertySlider = ({ numberOfCards = 5, data }) => {
     const scrollAmount = cardWidth * 3; // Adjust the scroll amount as needed
     scrollContainer.scrollLeft += scrollAmount;
   };
+  console.log(data);
 
   return (
     <div className="relative mb-8 flex justify-center">
@@ -53,10 +54,10 @@ const AssignmentPropertySlider = ({ numberOfCards = 5, data }) => {
         {data?.map((curElem, index) => {
           // console.log(value);
           return (
-            <div className="px-2 my-2 sm:my-0" ref={cardRef}>
+            <div className="pl-0 pr-6 my-2 sm:my-0" ref={cardRef} key={index}>
               <AssignmentCard
                 curElem={curElem}
-                key={index}
+
                 // link={`/${value.name.replace(" ", "-")}`}
               ></AssignmentCard>
             </div>

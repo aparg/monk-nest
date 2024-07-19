@@ -53,6 +53,7 @@ export default async function Home() {
       notFound();
     }
     const response = await res.json();
+    console.log(response);
     // console.log(response.data.results);
     return response.data.results;
   }
@@ -121,7 +122,7 @@ export default async function Home() {
         id="hero"
       > */}
       <div
-        className="container-fluid relative w-screen justify-center md:max-md:mt-10 h-auto row sm:g-2 items-center"
+        className="container-fluid relative w-screen justify-center md:mt-14 h-auto row sm:g-2 items-center"
         id="hero"
       >
         <div className="pl-20 col-12 col-md-6 md:order-1 order-2 inline">
@@ -155,7 +156,7 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <div className="sm:mt-40 mt-24 container-fluid">
+      <div className="mt-24 container-fluid">
         <div className="flex flex-col md:flex-row justify-between items-center mb-3">
           <div>
             <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-center md:text-start">
