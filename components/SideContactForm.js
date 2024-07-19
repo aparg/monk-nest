@@ -23,7 +23,13 @@ export default function SideContactForm(props) {
   };
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    ContactFormSubmit(credentials, setSubmitbtn, setCredentials);
+    ContactFormSubmit({
+      msgdata: credentials,
+      setSubmitbtn,
+      setCredentials,
+      title: credentials.proj_name,
+      page: "Preconstruction Homes",
+    });
   };
   return (
     <form

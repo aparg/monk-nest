@@ -21,7 +21,13 @@ export default function BottomContactForm(props) {
   };
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    ContactFormSubmit(credentials, setSubmitbtn, setCredentials);
+    ContactFormSubmit({
+      msgdata: credentials,
+      setSubmitbtn,
+      setCredentials,
+      title: `Inquiry for ${props.proj_name}`,
+      page: "Preconstructions Page",
+    });
   };
   return (
     <form

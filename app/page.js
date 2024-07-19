@@ -93,7 +93,7 @@ export default async function Home() {
   // console.log(preconData);
   return (
     <>
-      <div
+      {/* <div
         className="relative justify-center md:max-md:mt-10 items-center h-[50vh] md:h-[500px] w-full"
         id="hero"
       >
@@ -113,6 +113,45 @@ export default async function Home() {
             <div className="pb-1 mt-4 ww d-flex justify-content-center">
               <SearchBar />
             </div>
+          </div>
+        </div>
+      </div> */}
+      {/* <div
+        className="relative justify-center md:max-md:mt-10 items-center h-[50vh] md:h-[500px] w-full"
+        id="hero"
+      > */}
+      <div
+        className="container-fluid relative w-screen justify-center md:max-md:mt-10 h-auto row sm:g-2 items-center"
+        id="hero"
+      >
+        <div className="pl-20 col-12 col-md-6 md:order-1 order-2 inline">
+          {/* <span className="d-block mb-2 text-white">Find Your Next </span>{" "}
+                <span className="text-white">Commercial Property </span> */}
+          <h1 className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl sm-center font-family2 mt-5 inline mw">
+            <span className="z-10">Find your perfect </span>
+            <div className="relative inline-flex sm-center">
+              <span className="absolute inset-x-0 bottom-0 border-b-[80px] sm:border-b-[30px] border-[#AB0520]/40 z-1"></span>
+              <span className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl z-10">
+                home in Canada
+              </span>
+            </div>
+          </h1>
+          <h2 className="mt-6 text-lg text-[#222222]">
+            Discover your dream home with seamless browsing and personalized
+            service
+            <br /> all at your fingertip.
+          </h2>
+          <div className="pb-1 mt-6 ww d-flex justify-content-start">
+            <SearchBar />
+          </div>
+        </div>
+        <div className="col-12 col-md-6 md:order-1 order-1">
+          <div className="pb-1 pt-3 basis-1 flex flex-col items-center">
+            <Image
+              src="/hero-image1.png"
+              alt="residential-property"
+              className="rounded-lg w-full sm:w-8/12"
+            />
           </div>
         </div>
       </div>
@@ -183,13 +222,13 @@ export default async function Home() {
                 className="img-fluid"
               />
             </div>
-            <div className="side-text flex flex-col items-center sm:items-end">
+            <div className="side-text flex flex-col items-center">
               <p>
                 Monk Nest has one of the largest, most updated database of new
                 construction homes, backed by industry-leading technology and
                 partners.
               </p>
-              <img src="/logo.png" className="w-20 mt-2 mb-4 sm:my-0 "></img>
+              <img src="/logo.png" className="w-24 mt-6 mb-4 sm:mt-2"></img>
             </div>
           </div>
         </div>

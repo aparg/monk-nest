@@ -142,7 +142,7 @@ const page = async ({ params }) => {
               <div className="row justify-center sm:justify-between w-full gx-0">
                 <div className={`col-sm-12 col-md-8 `}>
                   <PropertyPage {...{ main_data }} />
-                  <BookingDate bannerImage={imageURLs[0]} />
+                  <BookingDate bannerImage={imageURLs[0]} proj_name={address} />
                   <div className="z-20 relative mt-8 sm:mt-24">
                     <h2 className="font-extrabold pb-3 text-lg sm:text-4xl">
                       Map View
@@ -161,6 +161,7 @@ const page = async ({ params }) => {
                   <BookShowingForm
                     defaultmessage={`Please book a showing for this property "${address}"`}
                     city={main_data.Municipality}
+                    proj_name={address}
                   ></BookShowingForm>
                 </div>
                 <div className="mt-24 mb-10 col-sm-12">

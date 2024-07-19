@@ -345,13 +345,13 @@ export default async function Home({ params }) {
           </div>
           <div className="py-5 my-5 d-none d-md-block">
             <div className="container-fluid">
-              <div className="row justify-content-center">
+              {/* <div className="row justify-content-center">
                 <img
                   src="/contact-bottom-2.png"
                   alt="dce"
-                  className="img-fluid w-25 w-smm-50 mb-3"
+                  className="img-fluid w-25 w-sm m-50 mb-3"
                 />
-              </div>
+              </div> */}
               <h2 className="fw-mine text-center px-md-4 fs-4">
                 Contact Monk Nest Team Today
               </h2>

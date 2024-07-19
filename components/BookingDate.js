@@ -5,7 +5,8 @@ import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import BookingDateOption from "./BookingDateOption";
 import TimingList from "./TimingList";
 import BookingType from "./BookingType";
-const BookingDate = ({ bannerImage }) => {
+import { sendEmail } from "@/actions/resend";
+const BookingDate = ({ bannerImage, proj_name }) => {
   // const [scrollPosition, setScrollPosition] = useState(0);
   // const [maxScroll, setMaxScroll] = useState(0);
   const cardRef = useRef(null);
@@ -96,7 +97,13 @@ const BookingDate = ({ bannerImage }) => {
   };
 
   const submitData = () => {
-    console.log(timing);
+    sendEmail({
+      content: timing,
+      page: "Resale Property Page",
+      title: `Schedule a viewing with timing for ${proj_name}`,
+    }).then(() => {
+      setTiming({ type: "", date: "", time: "", phone: "" });
+    });
   };
 
   return (

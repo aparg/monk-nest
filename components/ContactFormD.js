@@ -23,8 +23,14 @@ export default function ContactFormD(props) {
   };
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log(credentials);
-    ContactFormSubmit2(credentials, setSubmitbtn, setCredentials);
+    console.log(props);
+    ContactFormSubmit2({
+      msgdata: credentials,
+      setSubmitbtn,
+      setCredentials,
+      page: "Assignment Homes",
+      title: "Inquiry For Assignment: " + props.projects_name,
+    });
   };
   return (
     <form
@@ -116,12 +122,12 @@ export default function ContactFormD(props) {
       <input
         type="submit"
         value={submitbtn}
-        className="btn btn-call btn-lg w-100 mb-3"
+        className="btn btn-call bg-primary-green hover:bg-primary-green btn-lg w-100 mb-3"
         id="subbtn"
       />
       <div className="d-flex">
         <p className="small-text2 mb-0">
-          Homebaba is an online pre-construction homes database. Homebaba
+          Monk Nest is an online pre-construction homes database. Monk Nest
           curates the list of projects that are publicly available on internet
           and does not take part in any real estate transactions. Be advised the
           information provided on this page could be outdated or inaccurate. By

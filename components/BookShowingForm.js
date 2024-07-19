@@ -32,7 +32,14 @@ export default function BookShowingForm(props) {
   };
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    ContactFormSubmit(credentials, setSubmitbtn, setCredentials);
+    console.log();
+    ContactFormSubmit({
+      msgdata: credentials,
+      setSubmitbtn,
+      setCredentials,
+      title: credentials.proj_name,
+      page: "Resale Properties",
+    });
   };
 
   const getEmail = async () => {

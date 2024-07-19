@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ContactFormSubmit from "./ContactFormSubmit";
 
-export default function ContactFormB() {
+export default function ContactFormB({ project }) {
   const [submitbtn, setSubmitbtn] = useState("Contact now");
   const [credentials, setCredentials] = useState({
     name: "",
@@ -9,7 +9,7 @@ export default function ContactFormB() {
     email: "",
     message: "",
     realtor: "No",
-    project_namee: "Pre construction Homes",
+    project_namee: "",
     cityy: "Ontario",
   });
   const handleChange = (e) => {
@@ -21,7 +21,13 @@ export default function ContactFormB() {
   };
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    ContactFormSubmit(credentials, setSubmitbtn, setCredentials);
+    ContactFormSubmit({
+      msgdata: credentials,
+      setSubmitbtn,
+      setCredentials,
+      title: `Inquiry for Assignments: ${project}`,
+      page: "Assginment Homes",
+    });
   };
   return (
     <form onSubmit={(e) => handleFormSubmit(e)} method="POST" className="mb-3">
@@ -124,7 +130,7 @@ export default function ContactFormB() {
           <input
             value={submitbtn}
             type="submit"
-            className="btn btn-primary btn-lg"
+            className="btn bg-primary-green text-white btn-lg"
           ></input>
         </div>
       </div>

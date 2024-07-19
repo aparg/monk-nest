@@ -34,7 +34,10 @@ const Footer = () => {
                 8300 Woodbine Ave Unit 100 Markham, Ontario, ON L3R9Y7
               </span>
               <span>
-                <img src="/phone.svg" className="inline mr-2"></img>647-362-1757
+                <Link href="call">
+                  <img src="/phone.svg" className="inline mr-2"></img>
+                  647-362-1757
+                </Link>
               </span>
               <span className="my-1 text-primary-color">parag@monknest.ca</span>
               <span className="my-1 text-primary-color">905.882.6882</span>

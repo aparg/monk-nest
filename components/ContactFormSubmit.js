@@ -1,8 +1,15 @@
+import { sendEmail } from "@/actions/resend";
 import axios from "axios";
 import swal from "sweetalert";
 
-function ContactFormSubmit(msgdata, setSubmitbtn, setCredentials) {
-  let baseUrl = "https://api.homebaba.ca";
+function ContactFormSubmit({
+  msgdata,
+  setSubmitbtn,
+  setCredentials,
+  title = null,
+  page = null,
+}) {
+  // let baseUrl = "https://api.homebaba.ca";
   setSubmitbtn("Submitting...");
   let form_data = new FormData();
   form_data.append("name", msgdata.name);
@@ -10,14 +17,15 @@ function ContactFormSubmit(msgdata, setSubmitbtn, setCredentials) {
   form_data.append("phone", msgdata.phone);
   form_data.append("message", msgdata.message);
   form_data.append("realtor", msgdata.realtor);
-  let url = `${baseUrl}/api/contact-form-submit/`;
-  axios
-    .post(url, form_data, {
-      headers: {
-        "content-type": "multipart/form-data",
-      },
-      mode: "no-cors",
-    })
+  // let url = `${baseUrl}/api/contact-form-submit/`;
+  // axios
+  //   .post(url, form_data, {
+  //     headers: {
+  //       "content-type": "multipart/form-data",
+  //     },
+  //     mode: "no-cors",
+  //   })
+  sendEmail({ content: msgdata, title: title, page: page })
     .then(() => {
       setSubmitbtn("Sucessfully Submitted");
       setTimeout(() => {
