@@ -122,7 +122,7 @@ export default async function Home() {
         id="hero"
       > */}
       <div
-        className="container-fluid relative w-screen justify-center md:mt-14 h-auto row sm:g-2 items-center"
+        className="container-fluid relative w-screen justify-center h-[90vh] row sm:g-2 flex items-center"
         id="hero"
       >
         <div className="pl-20 col-12 col-md-6 md:order-1 order-2 inline">
