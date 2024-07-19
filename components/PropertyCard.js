@@ -4,6 +4,7 @@ import { resenditial } from "@/api/routes";
 import { saleLease } from "@/constant";
 import { Image } from "react-bootstrap";
 import { generateURL } from "@/helpers/generateURL";
+import TimeAgo from "./TimeAgo";
 // import { Image } from "react-bootstrap";
 
 const PropertyCard = React.forwardRef(({ curElem, small = false }, ref) => {
@@ -49,7 +50,10 @@ const PropertyCard = React.forwardRef(({ curElem, small = false }, ref) => {
   })();
 
   return (
-    <section className="text-black rounded-md shadow-lg" ref={ref}>
+    <section
+      className="text-black rounded-md shadow-[0_-3.7px_14.8px_rgba(0,0,0,0.05),0_3.7px_14.8px_rgba(0,0,0,0.05)] px-0"
+      ref={ref}
+    >
       <Link
         href={generateURL({
           cityVal: curElem.Municipality,
@@ -70,6 +74,14 @@ const PropertyCard = React.forwardRef(({ curElem, small = false }, ref) => {
                   onError={handleImageError}
                 />
               </div>
+              <div className="absolute bottom-3 left-2 flex flex-row">
+                <div className="text-black text-[0.8rem] p-[2px] px-2 rounded-pill mx-1 bg-white flex items-center">
+                  {curElem.TypeOwn1Out}{" "}
+                </div>
+                <div className="text-black text-xs p-[2px] px-2 rounded-pill mx-1 bg-white flex items-center">
+                  <TimeAgo modificationTimestamp={curElem.TimestampSql} />
+                </div>
+              </div>
             </div>
             <div className="flex-1 px-3 sm:px-5 py-3 bg-white">
               {/* {showDecreasedPrice && (
@@ -87,52 +99,60 @@ const PropertyCard = React.forwardRef(({ curElem, small = false }, ref) => {
                 </span>
               </h2>
               <span className={`text-black text-xs ${small && "hidden"}`}>
-                <div className="flex flex-row justify-start card-feature bg-white text-black mt-3 md:mt-1">
+                <div className="flex flex-row justify-start card-feature bg-white text-[#222222] mt-3 md:mt-2">
                   {curElem.Bedrooms && (
-                    <div className="flex items-center mr-2 text-nowrap text-black">
-                      {/* <Image
+                    <div className="flex items-center mr-4 text-nowrap">
+                      <Image
                         src="/bedrooms.svg"
-                        className="w-3 mr-[2px] inline"
+                        className="w-4 mr-[2px] inline"
                         alt="bedrooms"
-                      /> */}
-                      <span>{Math.floor(curElem.Bedrooms)} Bedroom</span>
+                      />
+                      <span className="text-[16px]">
+                        {Math.floor(curElem.Bedrooms)} bed
+                      </span>
                     </div>
                   )}
                   {curElem.Washrooms && (
-                    <div className="flex items-center mr-2 text-nowrap card-feature bg-white text-black">
-                      {/* <Image
+                    <div className="flex items-center mr-4 text-nowrap card-feature bg-white">
+                      <Image
                         src="/bathrooms.svg"
-                        className="w-3 mr-[2px] inline"
+                        className="w-4 mr-[2px] inline"
                         alt="washrooms"
-                      /> */}
-                      <span>{Math.floor(curElem.Washrooms)} Bath</span>
+                      />
+                      <span className="text-[16px]">
+                        {Math.floor(curElem.Washrooms)} bath
+                      </span>
                     </div>
                   )}
-                  {curElem.GarageSpaces && (
-                    <div className="flex items-center mr-2 text-nowrap text-black card-feature">
-                      {/* <Image
+                  {/* {curElem.GarageSpaces && (
+                    <div className="flex items-center mr-4 text-nowrap card-feature">
+                      <Image
                         src="/garage.svg"
-                        className="w-3 mr-[2px] inline"
+                        className="w-4 mr-[2px] inline"
                         alt="washrooms"
-                      /> */}
-                      <span>{Math.floor(curElem.GarageSpaces)} Garage</span>
+                      />
+                      <span className="text-[16px]">
+                        {Math.floor(curElem.GarageSpaces)} Garage
+                      </span>
                     </div>
-                  )}
+                  )} */}
                   {curElem.ApproxSquareFootage && (
-                    <div className="flex items-center mr-2 text-nowrap card-feature text-black">
-                      {/* <Image
+                    <div className="flex items-center mr-4 text-nowrap card-feature">
+                      <Image
                         src="/ruler.svg"
-                        className="w-3 mr-[2px] inline"
+                        className="w-4 mr-[2px] inline"
                         alt="washrooms"
-                      /> */}
-                      <span>{curElem.ApproxSquareFootage} Sq.Ft.</span>
+                      />
+                      <span className="text-[16px]">
+                        {curElem.ApproxSquareFootage} sft
+                      </span>
                     </div>
                   )}
                 </div>
               </span>
-              <div className="flex flex-row justify-between bg-white text-black">
-                <div className=" truncate text-ellipsis bg-white text-medium-black">
-                  <span className=" font-normal bva">
+              <div className="flex flex-row justify-between bg-white text-[#222222] mt-2">
+                <div className=" truncate text-ellipsis bg-white">
+                  <span className=" font-thin bva">
                     {curElem.StreetName ? (
                       `${curElem.Street || ""} ${curElem.StreetName || ""}${" "}
                     ${curElem.StreetAbbreviation || ""} ${
@@ -142,7 +162,7 @@ const PropertyCard = React.forwardRef(({ curElem, small = false }, ref) => {
                       <span className="p-4"></span>
                     )}
                   </span>
-                  <span>, Unit {curElem.Unit}</span>
+                  {/* <span>, Unit {curElem.Unit}</span> */}
                 </div>
               </div>
             </div>

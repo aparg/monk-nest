@@ -195,7 +195,7 @@ const FiltersWithSalesList = ({
               <div
                 className={`${
                   isMobileView ? "pt-1" : "pt-3"
-                } row row-cols-1 row-cols-md-4 row-cols-xs-1 row-cols-sm-1 row-cols-lg-4 row-cols-xl-5 g-0 gx-md-2 sm:gap-y-[40px]`}
+                } row row-cols-1 row-cols-md-4 row-cols-xs-1 row-cols-sm-1 row-cols-lg-4 row-cols-xl-4 g-0 gx-md-2 sm:gap-y-[40px]`}
               >
                 <SalesList
                   {...{

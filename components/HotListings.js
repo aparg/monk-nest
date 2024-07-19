@@ -3,6 +3,7 @@ import React, { useState, useMemo, useEffect, useRef } from "react";
 //CONSTANT
 import useDeviceView from "@/helpers/useDeviceView";
 import CityResoCard from "./reso/CityResoCard";
+import PropertyCard from "./PropertyCard";
 
 const plural = {
   Retail: " Businesses",
@@ -30,7 +31,7 @@ const HotListings = ({ salesData }) => {
 
   return salesData?.length > 0 ? (
     <div
-      className={`position-relative rounded-xl px-2 z-10 ${
+      className={`position-relative rounded-xl px-2 z-10 mb-6 ${
         isMobileView ? "mt-3" : "mt-4"
       }`}
       style={{
@@ -57,20 +58,23 @@ const HotListings = ({ salesData }) => {
 
       <div className="overflow-hidden">
         <div
-          className="row row-cols-lg-5 row-cols-md-3 row-cols-1 gx-4 mt-1 mb-4"
+          className="row row-cols-lg-4 row-cols-md-3 row-cols-1 gx-4 mt-1 mb-4"
           id="slider"
           ref={scrollRef}
         >
           {salesData?.map((curElem, index) => {
             // if (curElem.PhotoCount > 0) {
             return (
-              <CityResoCard
-                // city={formattedCity}
-                key={index}
-                curElem={curElem}
-                ref={cardRef}
-                small={true}
-              />
+              // <CityResoCard
+              //   // city={formattedCity}
+              //   key={index}
+              //   curElem={curElem}
+              //   ref={cardRef}
+              //   small={true}
+              // />
+              <div className="px-4" key={curElem.MLS}>
+                <PropertyCard curElem={curElem} />
+              </div>
             );
             // }
             // return null

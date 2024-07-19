@@ -16,6 +16,7 @@ import { getFilteredRetsData } from "@/actions/getSalesData";
 //CONSTANT
 import { saleLease, bedCount, houseType } from "@/constant";
 import CityResoCard from "./CityResoCard";
+import PropertyCard from "../PropertyCard";
 
 const SalesList = ({
   salesData,
@@ -89,12 +90,15 @@ const SalesList = ({
         <>
           {salesData.map((curElem, index) => {
             return (
-              <CityResoCard
-                showDecreasedPrice={filterState.priceDecreased}
-                city={city}
-                key={index}
-                curElem={curElem}
-              />
+              // <CityResoCard
+              //   showDecreasedPrice={filterState.priceDecreased}
+              //   city={city}
+              //   key={index}
+              //   curElem={curElem}
+              // />
+              <div className="px-4" key={curElem.MLS}>
+                <PropertyCard curElem={curElem} ref={ref} />
+              </div>
             );
             // }
             // return null
