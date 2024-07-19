@@ -138,8 +138,8 @@ export default async function Home() {
           </h1>
           <h2 className="mt-6 text-lg text-[#222222]">
             Discover your dream home with seamless browsing and personalized
-            service
-            <br /> all at your fingertip.
+            <br />
+            service all at your fingertip.
           </h2>
           <div className="pb-1 mt-6 ww d-flex justify-content-start">
             <SearchBar />
@@ -154,26 +154,6 @@ export default async function Home() {
             />
           </div>
         </div>
-      </div>
-      <div className="container-fluid mt-10 sm:mt-24">
-        <PopularCities />
-      </div>
-      <div className="sm:mt-40 mt-24 container-fluid">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-3">
-          <div className="text-center md:text-start">
-            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black ">
-              Featured Resale Properties
-            </h3>
-            <h4 className="mt-1">Explore our resale properties in Canada</h4>
-          </div>
-          <Link
-            href="/ontario"
-            className="bg-primary-color text-black px-5 py-3 hover:no-underline flex items-center underline hover:underline"
-          >
-            View More
-          </Link>
-        </div>
-        <PropertySlider data={residentialData} />
       </div>
       <div className="sm:mt-40 mt-24 container-fluid">
         <div className="flex flex-col md:flex-row justify-between items-center mb-3">
@@ -196,6 +176,23 @@ export default async function Home() {
         <div className="flex flex-col md:flex-row justify-between items-center mb-3">
           <div className="text-center md:text-start">
             <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black ">
+              Featured Resale Properties
+            </h3>
+            <h4 className="mt-1">Explore our resale properties in Canada</h4>
+          </div>
+          <Link
+            href="/ontario"
+            className="bg-primary-color text-black px-5 py-3 hover:no-underline flex items-center underline hover:underline"
+          >
+            View More
+          </Link>
+        </div>
+        <PropertySlider data={residentialData} />
+      </div>
+      <div className="sm:mt-40 mt-24 container-fluid">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-3">
+          <div className="text-center md:text-start">
+            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black ">
               Assignment Projects
             </h3>
             <h4 className="mt-1">Explore our assignment projects </h4>
@@ -212,6 +209,13 @@ export default async function Home() {
           numberOfCards={5}
         />
       </div>
+      <div className="mt-10 sm:mt-24">
+        <PhotosSection />
+      </div>
+      <div className="container-fluid mt-24 sm:mt-40">
+        <PopularCities />
+      </div>
+
       <div className="py-3 py-md-5 mt-10 md:mt-24">
         <div className="my-5 py-5">
           <div className="position-relative bg-lightblue container-fluid flex md:flex-row flex-col">
@@ -241,9 +245,7 @@ export default async function Home() {
       {/* <div className="container-fluid mt-10 sm:mt-24">
             <RealEstateNews />
           </div> */}
-      <div className="mt-10 sm:mt-24">
-        <PhotosSection />
-      </div>
+
       <div className="mt-10 sm:mt-24">
         <div className="py-5 my-5" id="mycontact">
           <div className="container-fluid">
@@ -254,7 +256,7 @@ export default async function Home() {
                 className="img-fluid w-25 w-smm-50 mb-3"
               />
             </div> */}
-            <h2 className=" text-center px-md-4 fs-4 text-md mb-10 font-bold">
+            <h2 className="text-center px-md-4 fs-4 text-lg mb-10 font-bold">
               Contact Monk Nest now!
             </h2>
 
