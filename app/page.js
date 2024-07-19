@@ -151,7 +151,7 @@ export default async function Home() {
             <Image
               src="/hero-image1.png"
               alt="residential-property"
-              className="rounded-lg w-full sm:w-8/12"
+              className="rounded-lg w-full sm:w-10/12"
             />
           </div>
         </div>
