@@ -135,12 +135,12 @@ export default async function Home() {
               </span>
             </div>
           </h1>
-          <h2 className="mt-3 text-[1rem] text-[#222222] font-thin">
+          <h2 className="mt-3 text-[1rem] text-[#444444] font-thin">
             Discover your dream home with seamless browsing and personalized
             <br />
             service all at your fingertip.
           </h2>
-          <img src="hero-icons.png" className="w-[30vw] mt-6"></img>
+          <img src="hero-icons.png" className="w-[30vw] mt-16"></img>
           <div className="pb-1 mt-6 ww d-flex justify-content-start">
             <SearchBar />
           </div>
