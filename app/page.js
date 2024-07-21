@@ -123,7 +123,7 @@ export default async function Home() {
         className="container-fluid relative w-screen justify-center h-[90vh] row sm:g-2 flex items-center"
         id="hero"
       >
-        <div className="pl-20 col-12 col-md-6 order-2 inline">
+        <div className="col-12 col-md-6 order-2 inline">
           {/* <span className="d-block mb-2 text-white">Find Your Next </span>{" "}
                 <span className="text-white">Commercial Property </span> */}
           <h1 className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl sm-center font-family2 mt-5 inline mw order-1">

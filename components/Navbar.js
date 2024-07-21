@@ -70,9 +70,9 @@ const Navbar = (props) => {
   });
 
   const buyOptions = [
-    { name: "Top 10 GTA Projects", link: "#" },
-    { name: "Homes for Sales", link: "#" },
-    { name: "New Homes", link: "#" },
+    // { name: "Top 10 GTA Projects", link: "#" },
+    { name: "Homes For Sales", link: "/ontario" },
+    { name: "Homes For Lease", link: generateURL({ saleLeaseVal: "lease" }) },
     { name: "Mortgage Questions", link: "#" },
   ];
 
@@ -205,7 +205,7 @@ const Navbar = (props) => {
             >
               Assignments
             </Link>
-            <Link
+            {/* <Link
               href="#"
               title=""
               className={`text-base font-normal transition-all duration-200 ${
@@ -216,8 +216,8 @@ const Navbar = (props) => {
                ${!isHomePage && "text-black"}`}
             >
               Blogs
-            </Link>
-            <Dropdown options={aboutUsOptions} text="black" />
+            </Link> */}
+            <Dropdown options={aboutUsOptions} name="About Us" text="black" />
             <Link
               href="#"
               title=""
@@ -231,7 +231,7 @@ const Navbar = (props) => {
               Agents
             </Link>
             <Link
-              href="#"
+              href="#mycontact"
               title=""
               className={`text-base font-normal transition-all duration-200 ${
                 isHomePage &&
