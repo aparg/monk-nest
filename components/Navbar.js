@@ -100,7 +100,7 @@ const Navbar = (props) => {
           </div>
 
           {!isHomePage || isSticky ? (
-            <div className="input-group input-group-search me-2 me-md-0">
+            <div className="flex items-center input-group-search me-2 me-md-0">
               <SearchBar />
               <button
                 className="input-group-text btn bg-light2 bg-lh mybtn d-block py-search"
