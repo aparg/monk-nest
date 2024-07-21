@@ -305,28 +305,28 @@ export default async function Home({ params }) {
                 </div>
                 <div className="side-fix-contact mt-mine pe-0">
                   <div className="m-1 p-4 py-3 shadow-lg rounded-mine bordt">
-                    <div className="row row-cols-2 align-items-start">
-                      <div className="col-4">
+                    <div className="row row-cols-1 align-items-center">
+                      {/* <div className="col-4">
                         <img
                           src="/contact-image.png"
                           alt="contact image"
                           className="agent-img"
-                        />
-                      </div>
-                      <div className="col-8">
-                        <h5 className="fw-bold text-center linem fs-4  mb-0">
-                          Register Now
-                        </h5>
-                        <p className="mb-0 text-center">
-                          <Link
-                            href="telto:(587) 887-2572"
-                            className="link-black"
-                          >
-                            <i className="bi bi-telephone"></i> (587) 887-2572
-                          </Link>
-                        </p>
-                        <p className="mb-0 text-center">hello@monknest.ca</p>
-                      </div>
+                        /> */}
+                    </div>
+                    <div className="col-12">
+                      <h5 className="fw-bold text-center linem fs-4  mb-0">
+                        Register Now
+                      </h5>
+                      <p className="mb-0 text-center">
+                        <Link
+                          href="telto:(587) 887-2572"
+                          className="link-black"
+                        >
+                          <i className="bi bi-telephone"></i> 647-362-1757
+                        </Link>
+                      </p>
+                      <p className="mb-0 text-center">parag@monknest.ca</p>
+                      {/* </div>  */}
                     </div>
                     <div className="my-4"></div>
                     <SideContactForm

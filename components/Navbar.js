@@ -249,7 +249,7 @@ const Navbar = (props) => {
             >
               {" "}
               <img
-                src="./call-white.svg"
+                src="/call-white.svg"
                 className="w-4 mr-3 inline"
                 alt="call"
               ></img>
@@ -398,7 +398,7 @@ const Navbar = (props) => {
             >
               Agents
             </Link>
-            <Link
+            {/* <Link
               href="#mycontact"
               title=""
               className={`text-base font-normal transition-all duration-200 ${
@@ -409,7 +409,7 @@ const Navbar = (props) => {
                ${!isHomePage && "text-black"}`}
             >
               Contact
-            </Link>
+            </Link> */}
             <Link
               href="#"
               title=""
@@ -417,7 +417,7 @@ const Navbar = (props) => {
             >
               {" "}
               <img
-                src="./call-white.svg"
+                src="/call-white.svg"
                 className="w-4 mr-3 inline"
                 alt="call"
               ></img>
