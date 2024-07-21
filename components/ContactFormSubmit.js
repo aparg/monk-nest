@@ -4,15 +4,15 @@ import swal from "sweetalert";
 
 function ContactFormSubmit({
   msgdata,
-  setSubmitbtn,
-  setCredentials,
+  setSubmitbtn = null,
+  setCredentials = null,
   title = null,
   page = null,
   contactType = null,
   leadEmail = null,
 }) {
   // let baseUrl = "https://api.homebaba.ca";
-  setSubmitbtn("Submitting...");
+  setSubmitbtn && setSubmitbtn("Submitting...");
   let form_data = new FormData();
   form_data.append("name", msgdata.name);
   form_data.append("email", msgdata.email);
@@ -51,28 +51,29 @@ function ContactFormSubmit({
           mode: "no-cors",
         })
         .then(() => {
-          setSubmitbtn("Sucessfully Submitted");
+          setSubmitbtn && setSubmitbtn("Sucessfully Submitted");
           setTimeout(() => {
-            setSubmitbtn("Contact Now");
+            setSubmitbtn && setSubmitbtn("Contact Now");
           }, 2000);
           swal(
             `Thank You, ${msgdata.name}`,
             "Please expect an email or call from us shortly",
             "success"
           );
-          setCredentials({
-            ...msgdata,
-            name: "",
-            phone: "",
-            email: "",
-            message: "",
-          });
+          setCredentials &&
+            setCredentials({
+              ...msgdata,
+              name: "",
+              phone: "",
+              email: "",
+              message: "",
+            });
         });
     })
 
     .catch((errr) => {
       console.log(errr);
-      setSubmitbtn("Contact Now");
+      setSubmitbtn && setSubmitbtn("Contact Now");
       swal("Message Failed", "Cannot send your message", "error");
     });
 }

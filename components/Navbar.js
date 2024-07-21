@@ -69,6 +69,20 @@ const Navbar = (props) => {
     return { name: obj.city, link: generateURL({ cityVal: obj.city }) };
   });
 
+  const buyOptions = [
+    { name: "Top 10 GTA Projects", link: "#" },
+    { name: "Homes for Sales", link: "#" },
+    { name: "New Homes", link: "#" },
+    { name: "Mortgage Questions", link: "#" },
+  ];
+
+  const aboutUsOptions = [
+    { name: "About Us", link: "#" },
+    { name: "Agents", link: "#" },
+    { name: "Finance", link: "#" },
+    { name: "Calculators", link: "#" },
+  ];
+
   return (
     <header
       className={`${
@@ -161,6 +175,7 @@ const Navbar = (props) => {
           </button>
 
           <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-8">
+            <Dropdown name="Buy" text="black" options={buyOptions} />
             <Dropdown
               name="Cities"
               text={isSticky || !isHomePage ? "black" : "white"}
@@ -176,7 +191,7 @@ const Navbar = (props) => {
               } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
                ${!isHomePage && "text-black"}`}
             >
-              Pre-Construction Homes
+              Pre Construction
             </Link>
             <Link
               href="#"
@@ -188,7 +203,7 @@ const Navbar = (props) => {
               } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
                ${!isHomePage && "text-black"}`}
             >
-              Resales
+              Assignments
             </Link>
             <Link
               href="#"
@@ -200,8 +215,9 @@ const Navbar = (props) => {
               } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
                ${!isHomePage && "text-black"}`}
             >
-              Finance
+              Blogs
             </Link>
+            <Dropdown options={aboutUsOptions} text="black" />
             <Link
               href="#"
               title=""
@@ -217,10 +233,27 @@ const Navbar = (props) => {
             <Link
               href="#"
               title=""
-              className={`text-base font-normal transition-all duration-200 text-white bg-primary-green py-2 px-3 rounded-md hover:text-white visited:text-white focus:text-white active:text-white`}
+              className={`text-base font-normal transition-all duration-200 ${
+                isHomePage &&
+                !isSticky &&
+                "lg:text-black hover:text-primary-green active:text-primary-green focus:text-primary-green"
+              } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
+               ${!isHomePage && "text-black"}`}
+            >
+              Contact
+            </Link>
+            <Link
+              href="#"
+              title=""
+              className={`text-base font-normal transition-all duration-200 text-white bg-primary-green py-2 pl-2 pr-3 rounded-md hover:text-white visited:text-white focus:text-white active:text-white`}
             >
               {" "}
-              Contact Now{" "}
+              <img
+                src="./call-white.svg"
+                className="w-4 mr-3 inline"
+                alt="call"
+              ></img>
+              647-362-1757{" "}
             </Link>
             <SignedOut>
               {" "}
