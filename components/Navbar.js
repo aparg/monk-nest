@@ -287,7 +287,7 @@ const Navbar = (props) => {
           } lg:hidden`}
         >
           <div className="flow-root">
-            <div className="flex flex-col px-6 -my-2 space-y-1">
+            {/* <div className="flex flex-col px-6 -my-2 space-y-1">
               <Link
                 href="/calculator"
                 title=""
@@ -323,7 +323,7 @@ const Navbar = (props) => {
               <Dropdown
                 name="Cities"
                 // text={isSticky || !isHomePage ? "black" : "black"}
-                text={"blackg"}
+                text={"black"}
                 options={cities}
               />
               <Link
@@ -342,7 +342,95 @@ const Navbar = (props) => {
                 {" "}
                 <UserButton />{" "}
               </SignedIn>
-            </div>
+            </div> */}
+            <Dropdown name="Buy" text="black" options={buyOptions} />
+            <Dropdown
+              name="Cities"
+              text={isSticky || !isHomePage ? "black" : "white"}
+              options={cities}
+            />
+            <Link
+              href="#"
+              title=""
+              className={`text-base font-normal transition-all duration-200 ${
+                isHomePage &&
+                !isSticky &&
+                "lg:text-black hover:text-primary-green active:text-primary-green focus:text-primary-green"
+              } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
+               ${!isHomePage && "text-black"}`}
+            >
+              Pre Construction
+            </Link>
+            <Link
+              href="#"
+              title=""
+              className={`text-base font-normal transition-all duration-200 ${
+                isHomePage &&
+                !isSticky &&
+                "lg:text-black hover:text-primary-green active:text-primary-green focus:text-primary-green"
+              } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
+               ${!isHomePage && "text-black"}`}
+            >
+              Assignments
+            </Link>
+            {/* <Link
+              href="#"
+              title=""
+              className={`text-base font-normal transition-all duration-200 ${
+                isHomePage &&
+                !isSticky &&
+                "lg:text-black hover:text-primary-green active:text-primary-green focus:text-primary-green"
+              } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
+               ${!isHomePage && "text-black"}`}
+            >
+              Blogs
+            </Link> */}
+            <Dropdown options={aboutUsOptions} name="About Us" text="black" />
+            <Link
+              href="#"
+              title=""
+              className={`text-base font-normal transition-all duration-200 ${
+                isHomePage &&
+                !isSticky &&
+                "lg:text-black hover:text-primary-green active:text-primary-green focus:text-primary-green"
+              } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
+               ${!isHomePage && "text-black"}`}
+            >
+              Agents
+            </Link>
+            <Link
+              href="#mycontact"
+              title=""
+              className={`text-base font-normal transition-all duration-200 ${
+                isHomePage &&
+                !isSticky &&
+                "lg:text-black hover:text-primary-green active:text-primary-green focus:text-primary-green"
+              } ${(isSticky || !isHomePage) && "hover:text-primary-green"}
+               ${!isHomePage && "text-black"}`}
+            >
+              Contact
+            </Link>
+            <Link
+              href="#"
+              title=""
+              className={`text-base font-normal transition-all duration-200 text-white bg-primary-green py-2 pl-2 pr-3 rounded-md hover:text-white visited:text-white focus:text-white active:text-white`}
+            >
+              {" "}
+              <img
+                src="./call-white.svg"
+                className="w-4 mr-3 inline"
+                alt="call"
+              ></img>
+              647-362-1757{" "}
+            </Link>
+            <SignedOut>
+              {" "}
+              <SignInButton />{" "}
+            </SignedOut>{" "}
+            <SignedIn>
+              {" "}
+              <UserButton />{" "}
+            </SignedIn>
           </div>
 
           {/* <div className="px-6 mt-6">

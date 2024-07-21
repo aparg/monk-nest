@@ -158,7 +158,7 @@ export default async function Home() {
       <div className="mt-24 container-fluid">
         <div className="flex flex-col md:flex-row justify-between items-center mb-3">
           <div>
-            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-center md:text-start">
+            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-start">
               Featured Projects
             </h3>
             <h4 className="mt-1">Explore our pre construction projects </h4>
@@ -174,7 +174,7 @@ export default async function Home() {
       </div>
       <div className="sm:mt-40 mt-24 container-fluid">
         <div className="flex flex-col md:flex-row justify-between items-center mb-3">
-          <div className="text-center md:text-start">
+          <div className="text-start">
             <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black ">
               Featured Resale Properties
             </h3>
@@ -191,7 +191,7 @@ export default async function Home() {
       </div>
       <div className="sm:mt-40 mt-24 container-fluid">
         <div className="flex flex-col md:flex-row justify-between items-center mb-3">
-          <div className="text-center md:text-start">
+          <div className="text-start">
             <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black ">
               Assignment Projects
             </h3>
