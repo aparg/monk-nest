@@ -5,8 +5,6 @@ import { Resend } from "resend";
 const resend = new Resend("re_EwHkJKn7_BqC3Jj57KVoFXeELa5b74Qhd");
 
 export const sendEmail = async ({ content, page = null, title = null }) => {
-  console.log(content);
-  console.log(title);
   const contentArray = [];
   for (const [key, value] of Object.entries(content)) {
     contentArray.push(`${capitalizeFirstLetter(key)} : ${value}`);
@@ -22,5 +20,5 @@ export const sendEmail = async ({ content, page = null, title = null }) => {
       .join("")}</ul>`,
   });
   if (error) console.log(error.message);
-  console.log(data, error);
+  // console.log(data, error);
 };

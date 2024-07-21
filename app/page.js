@@ -53,8 +53,6 @@ export default async function Home() {
       notFound();
     }
     const response = await res.json();
-    console.log(response);
-    // console.log(response.data.results);
     return response.data.results;
   }
   const torontoData = await getSalesData(INITIAL_OFFSET, INITIAL_LIMIT, CITY);
@@ -125,10 +123,10 @@ export default async function Home() {
         className="container-fluid relative w-screen justify-center h-[90vh] row sm:g-2 flex items-center"
         id="hero"
       >
-        <div className="pl-20 col-12 col-md-6 md:order-1 order-2 inline">
+        <div className="pl-20 col-12 col-md-6 order-2 inline">
           {/* <span className="d-block mb-2 text-white">Find Your Next </span>{" "}
                 <span className="text-white">Commercial Property </span> */}
-          <h1 className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl sm-center font-family2 mt-5 inline mw">
+          <h1 className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl sm-center font-family2 mt-5 inline mw order-1">
             <span className="z-10">Find your perfect </span>
             <div className="relative inline-flex sm-center">
               <span className="absolute inset-x-0 bottom-0 border-b-[80px] sm:border-b-[30px] border-[#AB0520]/40 z-1"></span>
@@ -137,16 +135,17 @@ export default async function Home() {
               </span>
             </div>
           </h1>
-          <h2 className="mt-6 text-lg text-[#222222]">
+          <h2 className="mt-3 text-[1rem] text-[#222222] font-thin">
             Discover your dream home with seamless browsing and personalized
             <br />
             service all at your fingertip.
           </h2>
+          <img src="hero-icons.png" className="w-[30vw] mt-6"></img>
           <div className="pb-1 mt-6 ww d-flex justify-content-start">
             <SearchBar />
           </div>
         </div>
-        <div className="col-12 col-md-6 md:order-1 order-1">
+        <div className="col-12 col-md-6 md:order-1 order-2">
           <div className="pb-1 pt-3 basis-1 flex flex-col items-center">
             <Image
               src="/hero-image1.png"

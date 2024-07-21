@@ -9,6 +9,7 @@ import NextTopLoader from "nextjs-toploader";
 import { Providers } from "./providers";
 import localFont from "next/font/local";
 import { Lato } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const satoshi = localFont({
   src: [
@@ -100,32 +101,34 @@ async function getCities() {
 export default async function RootLayout({ children }) {
   let cities = await getCities();
   return (
-    <html lang="en">
-      <body className={satoshi.className} style={{ overflowX: "hidden" }}>
-        <NextTopLoader
-          color="#FFFFFF"
-          initialPosition={0.08}
-          crawlSpeed={200}
-          height={3}
-          crawl={true}
-          showSpinner={true}
-          easing="ease"
-          speed={200}
-          shadow="0 0 10px #00A1FF,0 0 5px #00A1FF"
-        />
-        <Providers>
-          {/* <ComparisionFlagProvider> */}
-          <Navbar></Navbar>
-          {children}
-          <Footer cities={cities}></Footer>
-          {/* </ComparisionFlagProvider> */}
-        </Providers>
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-          crossOrigin="anonymous"
-        ></script>
-      </body>
-    </html>
+    <ClerkProvider signInForceRedirectUrl="/after-sign-in">
+      <html lang="en">
+        <body className={satoshi.className} style={{ overflowX: "hidden" }}>
+          <NextTopLoader
+            color="#FFFFFF"
+            initialPosition={0.08}
+            crawlSpeed={200}
+            height={3}
+            crawl={true}
+            showSpinner={true}
+            easing="ease"
+            speed={200}
+            shadow="0 0 10px #00A1FF,0 0 5px #00A1FF"
+          />
+          <Providers>
+            {/* <ComparisionFlagProvider> */}
+            <Navbar></Navbar>
+            {children}
+            <Footer cities={cities}></Footer>
+            {/* </ComparisionFlagProvider> */}
+          </Providers>
+          <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossOrigin="anonymous"
+          ></script>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

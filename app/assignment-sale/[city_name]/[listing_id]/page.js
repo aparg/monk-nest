@@ -40,7 +40,7 @@ export default function MyListings({ params }) {
     const dataSetter = async () => {
       const data = await getData();
       console.log(data);
-      setData(data);
+      // setData(data);
       setMyimages(data.images);
     };
     dataSetter();

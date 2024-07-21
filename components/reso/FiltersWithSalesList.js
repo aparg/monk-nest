@@ -14,6 +14,8 @@ import useDeviceView from "@/helpers/useDeviceView";
 import { isLocalStorageAvailable } from "@/helpers/checkLocalStorageAvailable";
 import { ImSpinner } from "react-icons/im";
 import HotListings from "../HotListings";
+import { useUser } from "@clerk/nextjs";
+import ContactFormSubmit from "../ContactFormSubmit";
 
 const FiltersWithSalesList = ({
   salesListData,
@@ -22,6 +24,9 @@ const FiltersWithSalesList = ({
   requiredType = undefined,
   saleLeaseVal = undefined,
 }) => {
+  const { isLoaded, isSignedIn, user } = useUser();
+  const leadEmail = user?.emailAddresses[0].emailAddress;
+  const [submitbtn, setSubmitbtn] = useState("Contact now");
   const initialState = {
     saleLease:
       saleLease[
@@ -140,6 +145,11 @@ const FiltersWithSalesList = ({
     if (isLocalStorageAvailable() && filterState) {
       localStorage.setItem("filterState", JSON.stringify(filterState));
       localStorage.setItem("selectedCity", capitalizeFirstLetter(city));
+      const credentials = {
+        filterState: JSON.parse(JSON.stringify(filterState)),
+        city: city,
+      };
+      ContactFormSubmit({ msgdata: credentials, leadEmail });
     }
 
     if (window !== undefined) {

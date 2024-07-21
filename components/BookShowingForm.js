@@ -9,10 +9,14 @@ import { usePathname } from "next/navigation";
 // import { Checkbox } from "@nextui-org/react";
 import Checkbox from "./Checkbox";
 import Link from "next/link";
+import { useUser } from "@clerk/nextjs";
 
 export default function BookShowingForm(props) {
   const pathname = usePathname();
   const [submitbtn, setSubmitbtn] = useState("Book now");
+  const contactType = "showing";
+  const { isLoaded, isSignedIn, user } = useUser();
+  const leadEmail = user?.emailAddresses[0].emailAddress;
   const [credentials, setCredentials] = useState({
     name: "",
     phone: "",
@@ -39,6 +43,8 @@ export default function BookShowingForm(props) {
       setCredentials,
       title: credentials.proj_name,
       page: "Resale Properties",
+      contactType,
+      leadEmail,
     });
   };
 

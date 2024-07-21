@@ -8,6 +8,8 @@ function ContactFormSubmit({
   setCredentials,
   title = null,
   page = null,
+  contactType = null,
+  leadEmail = null,
 }) {
   // let baseUrl = "https://api.homebaba.ca";
   setSubmitbtn("Submitting...");
@@ -17,6 +19,8 @@ function ContactFormSubmit({
   form_data.append("phone", msgdata.phone);
   form_data.append("message", msgdata.message);
   form_data.append("realtor", msgdata.realtor);
+  let baseUrl = "https://api.homebaba.ca";
+  let crmUrl = "https://backendcrm.homepapa.ca/services";
   // let url = `${baseUrl}/api/contact-form-submit/`;
   // axios
   //   .post(url, form_data, {
@@ -25,25 +29,47 @@ function ContactFormSubmit({
   //     },
   //     mode: "no-cors",
   //   })
+
+  // Prepare the data for the CRM API call
+  let crmData = {
+    name: contactType,
+    attributes: {
+      ...msgdata,
+    },
+    leadEmail: leadEmail,
+  };
+  delete crmData.attributes.name;
+  delete crmData.attributes.email;
+
   sendEmail({ content: msgdata, title: title, page: page })
     .then(() => {
-      setSubmitbtn("Sucessfully Submitted");
-      setTimeout(() => {
-        setSubmitbtn("Contact Now");
-      }, 2000);
-      swal(
-        `Thank You, ${msgdata.name}`,
-        "Please expect an email or call from us shortly",
-        "success"
-      );
-      setCredentials({
-        ...msgdata,
-        name: "",
-        phone: "",
-        email: "",
-        message: "",
-      });
+      axios
+        .post(crmUrl, crmData, {
+          headers: {
+            "content-type": "application/json",
+          },
+          mode: "no-cors",
+        })
+        .then(() => {
+          setSubmitbtn("Sucessfully Submitted");
+          setTimeout(() => {
+            setSubmitbtn("Contact Now");
+          }, 2000);
+          swal(
+            `Thank You, ${msgdata.name}`,
+            "Please expect an email or call from us shortly",
+            "success"
+          );
+          setCredentials({
+            ...msgdata,
+            name: "",
+            phone: "",
+            email: "",
+            message: "",
+          });
+        });
     })
+
     .catch((errr) => {
       console.log(errr);
       setSubmitbtn("Contact Now");

@@ -9,6 +9,7 @@ import Dropdown from "./Dropdown";
 import { generateURL } from "@/helpers/generateURL";
 import { houseType } from "@/constant";
 import citiesWithProvinces from "@/constant/cities";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 // import {
 //   useComparingProperties,
 //   useComparisionFlag,
@@ -165,7 +166,6 @@ const Navbar = (props) => {
               text={isSticky || !isHomePage ? "black" : "white"}
               options={cities}
             />
-
             <Link
               href="#"
               title=""
@@ -214,7 +214,6 @@ const Navbar = (props) => {
             >
               Agents
             </Link>
-
             <Link
               href="#"
               title=""
@@ -223,6 +222,14 @@ const Navbar = (props) => {
               {" "}
               Contact Now{" "}
             </Link>
+            <SignedOut>
+              {" "}
+              <SignInButton />{" "}
+            </SignedOut>{" "}
+            <SignedIn>
+              {" "}
+              <UserButton />{" "}
+            </SignedIn>
           </div>
 
           {/* <Link
@@ -294,6 +301,14 @@ const Navbar = (props) => {
                 {" "}
                 Contact{" "}
               </Link>
+              <SignedOut>
+                {" "}
+                <SignInButton />{" "}
+              </SignedOut>{" "}
+              <SignedIn>
+                {" "}
+                <UserButton />{" "}
+              </SignedIn>
             </div>
           </div>
 

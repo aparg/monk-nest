@@ -2,9 +2,13 @@
 import { useState } from "react";
 import ContactFormSubmit from "./ContactFormSubmit";
 import React from "react";
+import { useUser } from "@clerk/nextjs";
 
 export default function BottomContactForm(props) {
   const [submitbtn, setSubmitbtn] = useState("Contact now");
+  const { isLoaded, isSignedIn, user } = useUser();
+  const contactType = "contact";
+  const leadEmail = user?.emailAddresses[0].emailAddress;
   const [credentials, setCredentials] = useState({
     name: "",
     phone: "",
@@ -27,6 +31,8 @@ export default function BottomContactForm(props) {
       setCredentials,
       title: `Inquiry for ${props.proj_name}`,
       page: "Preconstructions Page",
+      contactType,
+      leadEmail,
     });
   };
   return (
