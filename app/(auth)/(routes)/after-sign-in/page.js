@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useUser } from "@clerk/nextjs";
+import SigningInPage from "@/components/SigningInPage";
 
 export default function AfterSignInPage() {
   const router = useRouter();
@@ -28,7 +29,7 @@ export default function AfterSignInPage() {
             },
             body: JSON.stringify(leadData),
           });
-          if (await response.json() === true) {
+          if ((await response.json()) === true) {
             router.push("/");
           }
           if (!response.ok) {
@@ -39,7 +40,6 @@ export default function AfterSignInPage() {
 
           const result = await response.json();
           router.push("/");
-
         } catch (error) {
           console.error("Error creating lead:", error);
         }
@@ -53,6 +53,7 @@ export default function AfterSignInPage() {
   }, [isLoaded, isSignedIn, user, router]);
 
   return (
-    <div>Completing sign-in and creating lead... Check console for logs.</div>
+    <SigningInPage />
+    // <div>Completing sign-in and creating lead... Check console for logs.</div>
   );
 }

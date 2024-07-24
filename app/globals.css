@@ -27,7 +27,10 @@
   font-family: "Merriweather", serif;
 }
 
-a {
+a,
+a:active,
+a:visited,
+a:hover {
   color: black !important;
   text-decoration: none !important;
 }
@@ -1435,10 +1438,10 @@ label {
 
 .side-text {
   position: absolute;
-  right: 5%;
+  right: 0%;
   top: 30%;
   transform: translateX(-50%);
-  max-width: 500px;
+  max-width: 450px;
 }
 
 .side-text p {
@@ -2493,12 +2496,12 @@ body {
 }
 
 a {
-  color: #00a1ff !important;
+  /* color: #00a1ff !important; */
   text-decoration: none !important;
 }
 
 a:hover {
-  color: #00a1ff !important;
+  /* color: #00a1ff !important; */
   text-decoration: none !important;
   cursor: pointer !important;
 }
@@ -3825,10 +3828,10 @@ label {
 }
 .side-text {
   position: absolute;
-  right: 5%;
+  right: 0%;
   top: 30%;
   transform: translateX(-50%);
-  max-width: 500px;
+  max-width: 450px;
 }
 .side-text p {
   font-size: 1.2rem;
