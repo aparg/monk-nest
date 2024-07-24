@@ -218,7 +218,7 @@ const Navbar = (props) => {
               Blogs
             </Link> */}
             <Dropdown options={aboutUsOptions} name="About Us" text="black" />
-            <Link
+            {/* <Link
               href="#"
               title=""
               className={`text-base font-normal transition-all duration-200 ${
@@ -229,7 +229,7 @@ const Navbar = (props) => {
                ${!isHomePage && "text-black"}`}
             >
               Agents
-            </Link>
+            </Link> */}
             <Link
               href="#mycontact"
               title=""
@@ -386,7 +386,7 @@ const Navbar = (props) => {
               Blogs
             </Link> */}
             <Dropdown options={aboutUsOptions} name="About Us" text="black" />
-            <Link
+            {/* <Link
               href="#"
               title=""
               className={`text-base font-normal transition-all duration-200 ${
@@ -397,7 +397,7 @@ const Navbar = (props) => {
                ${!isHomePage && "text-black"}`}
             >
               Agents
-            </Link>
+            </Link> */}
             {/* <Link
               href="#mycontact"
               title=""
