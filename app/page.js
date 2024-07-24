@@ -120,13 +120,13 @@ export default async function Home() {
         id="hero"
       > */}
       <div
-        className="container-fluid relative w-screen justify-center h-[90vh] row sm:g-2 flex items-center"
+        className="container-fluid relative w-screen justify-center h-[90vh] row sm:g-2 flex items-center "
         id="hero"
       >
-        <div className="col-12 col-md-6 order-2 inline">
+        <div className="col-12 col-md-6 order-1 inline flex flex-col items-center">
           {/* <span className="d-block mb-2 text-white">Find Your Next </span>{" "}
                 <span className="text-white">Commercial Property </span> */}
-          <h1 className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl sm-center font-family2 mt-5 inline mw order-1">
+          <h1 className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl sm-center font-family2 mt-5 inline mw order-1 text-center">
             <span className="z-10">Find your perfect </span>
             <div className="relative inline-flex sm-center">
               <span className="absolute inset-x-0 bottom-0 border-b-[80px] sm:border-b-[30px] border-[#AB0520]/40 z-1"></span>
@@ -135,13 +135,13 @@ export default async function Home() {
               </span>
             </div>
           </h1>
-          <h2 className="mt-3 text-[1rem] text-[#444444] font-thin">
+          <h2 className="mt-3 text-[1rem] text-[#444444] font-thin order-2">
             Discover your dream home with seamless browsing and personalized
             <br />
             service all at your fingertip.
           </h2>
-          <img src="hero-icons.png" className="w-[30vw] mt-16"></img>
-          <div className="pb-1 mt-6 ww d-flex justify-content-start">
+          <img src="hero-icons.png" className="w-[30vw] mt-16 order-3"></img>
+          <div className="pb-1 mt-6 ww d-flex justify-content-start order-4">
             <SearchBar />
           </div>
         </div>

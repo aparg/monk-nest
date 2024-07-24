@@ -40,7 +40,7 @@ export default function MyListings({ params }) {
     const dataSetter = async () => {
       const data = await getData();
       console.log(data);
-      // setData(data);
+      setData(data);
       setMyimages(data.images);
     };
     dataSetter();
@@ -517,7 +517,7 @@ export default function MyListings({ params }) {
                         data-tip
                         data-for="registerTip"
                       >
-                        Homebaba Verified Agent
+                        Monk Nest Verified Agent
                         <span>
                           <sup>
                             <img
@@ -545,15 +545,11 @@ export default function MyListings({ params }) {
                         </p>
                         <p>
                           Homebaba Verified Agent
-                          <span>
-                            <sup>
-                              <img
-                                src="/cc.png"
-                                alt="verfied"
-                                className="img-fluid small-i ms-1"
-                              />
-                            </sup>
-                          </span>{" "}
+                          <img
+                            src="/cc.png"
+                            alt="verfied"
+                            className="img-fluid small-i ms-1 inline"
+                          />
                           are verified by our team based on above qualities.
                         </p>
                         <p>
