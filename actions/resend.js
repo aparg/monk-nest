@@ -12,7 +12,7 @@ export const sendEmail = async ({ content, page = null, title = null }) => {
   const { data, error } = await resend.emails.send({
     from: "Acme <onboarding@resend.dev>",
     to: ["apargtm@gmail.com"],
-    subject: `Inquiry for a ${page || "property"} from monkeynest.com`,
+    subject: `Inquiry for a ${page || "property"} from monknest.com`,
     html: `<h1>${
       title || `Inquiry from ${page} page`
     }</h1><br/><ul>${contentArray
