@@ -486,7 +486,7 @@ export default function MyListings({ params }) {
                   />
                 </div>
                 <div className="m-1 p-4 py-3 shadow-lg rounded-mine bordt">
-                  <div className="row row-cols-2 gx-0 mx-0 align-items-center">
+                  {/* <div className="row row-cols-2 gx-0 mx-0 align-items-center">
                     <div className="col-6">
                       {data?.house_detail?.realtor?.image && (
                         <img
@@ -563,13 +563,12 @@ export default function MyListings({ params }) {
                         {data?.house_detail?.realtor?.realtor_association}
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="my-4"></div>
                   <ContactFormD
                     projects_name={data?.house_detail?.project_address}
                     defaultmessage={
                       "Hi " +
-                      (data?.house_detail?.realtor.user?.first_name || "") +
                       ",\nPlease send me more information about this listing" +
                       ".Thank you"
                     }
