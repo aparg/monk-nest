@@ -120,17 +120,17 @@ export default async function Home() {
         id="hero"
       > */}
       <div
-        className="container-fluid relative w-screen justify-center h-[90vh] row sm:g-2 flex items-center "
+        className="container-fluid relative w-full justify-center h-[90vh] row sm:g-2 flex items-center items-end"
         id="hero"
       >
-        <div className="col-12 col-md-6 order-1 inline flex flex-col items-center">
+        <div className="col-12 col-md-6 order-1 inline flex flex-col sm:pl-20 sm:justify-start justify-center">
           {/* <span className="d-block mb-2 text-white">Find Your Next </span>{" "}
                 <span className="text-white">Commercial Property </span> */}
-          <h1 className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl sm-center font-family2 mt-5 inline mw order-1 text-center">
+          <h1 className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl sm-center font-family2 mt-5 mw order-1 text-left">
             <span className="z-10">Find your perfect </span>
             <div className="relative inline-flex sm-center">
-              <span className="absolute inset-x-0 bottom-0 border-b-[80px] sm:border-b-[30px] border-[#AB0520]/40 z-1"></span>
-              <span className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl z-10">
+              <span className="absolute inset-x-0 bottom-0 border-b-[10px] sm:border-b-[30px] border-[#AB0520]/40 z-1"></span>
+              <span className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl z-10 text-start">
                 home in Canada
               </span>
             </div>
@@ -140,7 +140,10 @@ export default async function Home() {
             <br />
             service all at your fingertip.
           </h2>
-          <img src="hero-icons.png" className="w-[30vw] mt-16 order-3"></img>
+          <img
+            src="hero-icons.png"
+            className="sm:w-[30vw] w-[80vw] mt-16 order-3"
+          ></img>
           <div className="pb-1 mt-6 ww d-flex justify-content-start order-4">
             <SearchBar />
           </div>
@@ -156,60 +159,75 @@ export default async function Home() {
         </div>
       </div>
       <div className="mt-24 container-fluid">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-3">
-          <div>
-            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-start">
+        <div className="flex flex-col md:flex-row justify-center items-center mb-3">
+          <div className="flex flex-col items-center">
+            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-center">
               Featured Projects
             </h3>
-            <h4 className="mt-1">Explore our pre construction projects </h4>
+            <h4 className="mt-1 text-center">
+              Explore our pre construction projects{" "}
+            </h4>
           </div>
-          <Link
-            href="/pre-construction-homes"
-            className="bg-primary-color text-black px-5 py-3 hover:no-underline flex items-center underline hover:underline"
-          >
-            View More
-          </Link>
         </div>
         <PreconPropertySlider data={preconData} numberOfCards={10} />
-      </div>
-      <div className="sm:mt-40 mt-24 container-fluid">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-3">
-          <div className="text-start">
-            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black ">
-              Featured Resale Properties
-            </h3>
-            <h4 className="mt-1">Explore our resale properties in Canada</h4>
-          </div>
-          <Link
-            href="/ontario"
-            className="bg-primary-color text-black px-5 py-3 hover:no-underline flex items-center underline hover:underline"
-          >
-            View More
-          </Link>
-        </div>
-        <PropertySlider data={residentialData} />
-      </div>
-      <div className="sm:mt-40 mt-24 container-fluid">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-3">
-          <div className="text-start">
-            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black ">
-              Assignment Projects
-            </h3>
-            <h4 className="mt-1">Explore our assignment projects </h4>
-          </div>
+        <div className="flex justify-center">
           <Link
             href="/pre-construction-homes"
-            className="bg-primary-color text-black px-5 py-3 hover:no-underline flex items-center underline hover:underline"
+            className="bg-primary-green rounded-md text-white px-5 py-3 hover:no-underline flex items-center"
+            style={{ color: "white !important" }}
           >
-            View More
+            Explore all preconstructions
           </Link>
         </div>
-        <AssignmentPropertySlider
-          data={assignmentData?.slice(0, 5)}
-          numberOfCards={5}
-        />
       </div>
-      <div className="mt-10 sm:mt-24">
+      <div className="sm:mt-40 mt-24 container-fluid">
+        <div className="flex flex-col md:flex-row justify-center items-center mb-3">
+          <div className="flex flex-col items-center">
+            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-center">
+              Featured Resale Properties
+            </h3>
+            <h4 className="mt-1 text-center">
+              Explore our featured resale properties in Canada{" "}
+            </h4>
+          </div>
+        </div>
+        <PropertySlider data={residentialData} />
+        <div className="flex justify-center">
+          <Link
+            href="/ontario"
+            className="bg-primary-green rounded-md text-white px-5 py-3 flex items-center"
+            style={{ color: "white !important" }}
+          >
+            Explore all resale
+          </Link>
+        </div>
+      </div>
+      <div className="sm:mt-40 mt-24 container-fluid">
+        <div className="flex flex-col md:flex-row justify-center items-center mb-3">
+          <div className="flex flex-col items-center">
+            <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-center">
+              Assignment Projects
+            </h3>
+            <h4 className="mt-1 text-center">
+              Explore our assignment projects{" "}
+            </h4>
+          </div>
+        </div>
+        <AssignmentPropertySlider
+          data={assignmentData?.slice(0, 4)}
+          numberOfCards={4}
+        />
+        <div className="flex justify-center">
+          <Link
+            href="/pre-construction-homes"
+            className="bg-primary-green rounded-md text-white px-5 py-3 flex items-center"
+            style={{ color: "white !important" }}
+          >
+            Explore all assignments
+          </Link>
+        </div>
+      </div>
+      <div className="mt-10 sm:mt-40 mt-24">
         <PhotosSection />
       </div>
       <div className="container-fluid mt-24 sm:mt-40">

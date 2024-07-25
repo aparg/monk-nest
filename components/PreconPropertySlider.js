@@ -27,7 +27,7 @@ const PreconPropertySlider = ({ numberOfCards = 5, data }) => {
   };
 
   return (
-    <div className="relative mb-8  flex justify-center">
+    <div className="relative mb-8 flex justify-center">
       {/* <div className="btns flex justify-between">
         <button
           className="scroll-left absolute start-0"
@@ -45,16 +45,27 @@ const PreconPropertySlider = ({ numberOfCards = 5, data }) => {
         </button>
       </div> */}
       <div
-        className={`w-full row row-cols-lg-${numberOfCards} row-cols-md-5 row-cols-1 py-2`}
+        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:max-h-[900px] `}
         // id="slider"
         ref={scrollRef}
       >
-        {data?.map((value, index) => {
+        {data?.slice(0, 4).map((value, index) => {
           // console.log(value);
           return (
-            <div className="pl-0 pr-6 my-2 sm:my-0" key={index} ref={cardRef}>
+            <div
+              className={`pl-0 pr-6 my-2 sm:my-0 ${
+                index === 0 ? "md:col-span-2 lg:col-span-2 sm:row-span-2" : ""
+              }${
+                index === 1
+                  ? "md:col-span-2 lg:col-span-2 row-span-1 sm:h-[20rem]"
+                  : ""
+              }`}
+              key={index}
+              ref={cardRef}
+            >
               <CondoCard
                 {...value}
+                index
                 // link={`/${value.name.replace(" ", "-")}`}
               ></CondoCard>
             </div>

@@ -61,7 +61,7 @@ const cardsData = [
 ];
 const PopularCities = () => {
   return (
-    <div className="flex flex-col items-center sm:items-start">
+    <div className="flex flex-col items-center">
       <h3 className="main-title mw font-extrabold text-[2rem] md:text-4xl text-black text-center md:text-start">
         Featured Areas
       </h3>

@@ -51,7 +51,9 @@ export default function CondoCard(props) {
                 loading="lazy"
                 src={`https://api.dolphy.ca${props.image[0].image}`}
                 layout="responsive"
-                className="img-fluid condocard-img-top"
+                className={`img-fluid condocard-img-top ${
+                  index == 1 ? "h-[10rem]" : ""
+                }`}
                 alt={`${props.project_name} located at ${props.project_address} image`}
               />
             ) : (

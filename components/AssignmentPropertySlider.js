@@ -6,7 +6,7 @@ import CondoCard from "./PreconPropertyCard";
 import useDeviceView from "@/helpers/useDeviceView";
 import AssignmentCard from "./AssignmentCard";
 
-const AssignmentPropertySlider = ({ numberOfCards = 5, data }) => {
+const AssignmentPropertySlider = ({ numberOfCards = 4, data }) => {
   const scrollRef = useRef(null); //used to hold scroll value
   const cardRef = useRef(null); //used to hold card width value
   const { isMobileView } = useDeviceView();
@@ -30,7 +30,7 @@ const AssignmentPropertySlider = ({ numberOfCards = 5, data }) => {
 
   return (
     <div className="relative mb-8 flex justify-center">
-      <div className="btns flex justify-between">
+      {/* <div className="btns flex justify-between">
         <button
           className="scroll-left absolute start-0"
           title="scroll left"
@@ -45,9 +45,9 @@ const AssignmentPropertySlider = ({ numberOfCards = 5, data }) => {
         >
           <SlArrowRight size={16} color="black" />
         </button>
-      </div>
+      </div> */}
       <div
-        className={`w-full row row-cols-lg-${numberOfCards} row-cols-md-5 row-cols-1 py-2`}
+        className={`w-full row row-cols-lg-${numberOfCards} row-cols-md-4 row-cols-1 py-2`}
         // id="slider"
         ref={scrollRef}
       >

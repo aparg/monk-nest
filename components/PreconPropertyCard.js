@@ -23,30 +23,30 @@ export default function CondoCard(props) {
 
   return (
     <>
-      <div className="card border-0 rounded-mine my-3 my-md-0 condocard h-full flex-grow">
-        <div className="position-relative is-loading">
-          <Link
+      <div className="card border-0 rounded-mine my-md-0 condocard h-full">
+        <div className="position-relative is-loading h-[80%]">
+          {/* <Link
             href={`/pre-construction-homes/${props.city.slug}/${props.slug}`}
             className="mylinkk"
             // target="_blank"
-          >
-            {props.image.length > 0 ? (
-              <img
-                loading="lazy"
-                src={`${props.image[0].image}`}
-                layout="responsive"
-                className="img-fluid condocard-img-top rounded-minet"
-                alt={`${props.project_name} located at ${props.project_address} image`}
-              />
-            ) : (
-              <img
-                loading="lazy"
-                src="/noimage.webp"
-                className="img-fluid condocard-img-top rounded-minet"
-                alt={`no image available for ${props.project_name}`}
-              />
-            )}
-          </Link>
+          > */}
+          {props.image.length > 0 ? (
+            <img
+              loading="lazy"
+              src={`${props.image[0].image}`}
+              layout="responsive"
+              className={`img-fluid condocard-img-top rounded-minet w-full h-full`}
+              alt={`${props.project_name} located at ${props.project_address} image`}
+            />
+          ) : (
+            <img
+              loading="lazy"
+              src="/noimage.webp"
+              className="img-fluid condocard-img-top rounded-minet"
+              alt={`no image available for ${props.project_name}`}
+            />
+          )}
+          {/* </Link> */}
           {/* <span className="p-1 px-2 abs1">Preconstruction</span> */}
           {props.status == "Upcoming" && (
             <span className="mmmmm bg-yellow p-1 px-2">{props.status}</span>
