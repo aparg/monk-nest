@@ -29,7 +29,9 @@ export default function AfterSignInPage() {
             },
             body: JSON.stringify(leadData),
           });
-          if ((await response.json()) === true) {
+          await response.json();
+          console.log(response.ok);
+          if (response.ok) {
             router.push("/");
           }
           if (!response.ok) {
@@ -51,9 +53,9 @@ export default function AfterSignInPage() {
       router.push("/sign-in");
     }
   }, [isLoaded, isSignedIn, user, router]);
-
+  console.log("HERE");
   return (
-    <SigningInPage />
     // <div>Completing sign-in and creating lead... Check console for logs.</div>
+    <SigningInPage />
   );
 }

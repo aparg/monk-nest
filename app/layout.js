@@ -101,7 +101,7 @@ async function getCities() {
 export default async function RootLayout({ children }) {
   let cities = await getCities();
   return (
-    <ClerkProvider afterSignInUrl="/after-sign-in">
+    <ClerkProvider signInForceRedirectUrl="/after-sign-in">
       <html lang="en">
         <body className={satoshi.className} style={{ overflowX: "hidden" }}>
           <NextTopLoader

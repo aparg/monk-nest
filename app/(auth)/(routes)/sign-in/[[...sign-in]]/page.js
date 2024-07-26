@@ -1,4 +1,9 @@
 import { SignIn } from "@clerk/nextjs";
 export default function Page() {
-  return <SignIn afterSignInUrl="/after-sign-in" />;
+  return (
+    <SignIn
+      forceRedirectUrl="/after-sign-in"
+      fallbackRedirectUrl="/after-sign-in"
+    />
+  );
 }
