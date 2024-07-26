@@ -173,8 +173,7 @@ export default async function Home() {
         <div className="flex justify-center">
           <Link
             href="/pre-construction-homes"
-            className="bg-primary-green rounded-md text-white px-5 py-3 hover:no-underline flex items-center"
-            style={{ color: "white !important" }}
+            className="bg-primary-green rounded-md text-white px-5 py-3 hover:no-underline flex items-center whitelink"
           >
             Explore all preconstructions
           </Link>
@@ -195,8 +194,7 @@ export default async function Home() {
         <div className="flex justify-center">
           <Link
             href="/ontario"
-            className="bg-primary-green rounded-md text-white px-5 py-3 flex items-center"
-            style={{ color: "white !important" }}
+            className="bg-primary-green rounded-md text-white px-5 py-3 flex items-center whitelink"
           >
             Explore all resale
           </Link>
@@ -220,8 +218,7 @@ export default async function Home() {
         <div className="flex justify-center">
           <Link
             href="/pre-construction-homes"
-            className="bg-primary-green rounded-md text-white px-5 py-3 flex items-center"
-            style={{ color: "white !important" }}
+            className="bg-primary-green rounded-md text-white px-5 py-3 flex items-center whitelink"
           >
             Explore all assignments
           </Link>
