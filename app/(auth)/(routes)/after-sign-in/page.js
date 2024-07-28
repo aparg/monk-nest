@@ -29,7 +29,8 @@ export default function AfterSignInPage() {
             },
             body: JSON.stringify(leadData),
           });
-          await response.json();
+          const responseJSON = await response.json();
+          console.log(responseJSON)
           console.log(response.ok);
           if (response.ok) {
             router.push("/");
